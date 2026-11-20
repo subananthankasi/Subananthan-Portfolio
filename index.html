@@ -28,6 +28,9 @@
     href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
 
+  <!-- Global Custom Stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -82,7 +85,7 @@
 
   <!-- STICKY GLASSMORPHISM NAVBAR  ....  -->
 
-  <header class="sticky top-0 z-40 glass-nav transition-colors duration-300">
+  <header id="main-header" class="sticky top-0 z-40">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 sm:h-[70px]">
         <!-- Brand Logo -->
@@ -1955,6 +1958,12 @@
       const navLinks = document.querySelectorAll('.nav-link');
       const expTimeline = document.getElementById('experience-timeline');
       const expProgressLine = document.getElementById('experience-progress-line');
+      const mainHeader = document.getElementById('main-header');
+
+      function updateHeaderState() {
+        if (!mainHeader) return;
+        mainHeader.classList.toggle('scrolled', window.scrollY > 20);
+      }
 
       function updateTimelineProgress() {
         if (!expTimeline || !expProgressLine) return;
@@ -1966,6 +1975,7 @@
       }
 
       window.addEventListener('scroll', () => {
+        updateHeaderState();
         const scrollTop = window.scrollY;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
         const progress = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
@@ -1985,6 +1995,7 @@
         updateTimelineProgress();
       }, { passive: true });
       updateTimelineProgress();
+      updateHeaderState();
 
       /* HERO SPOTLIGHT, 3D CARD TILT & STAT COUNTERS  */
       const heroSection = document.getElementById('about');
