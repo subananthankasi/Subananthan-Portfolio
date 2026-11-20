@@ -1,0 +1,2581 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subananthan K — Full-Stack Developer | React.js, Next.js, Node.js &amp; PHP</title>
+  <meta name="description"
+    content="Personal portfolio of Subananthan K (Subananthan Kasirajan), a Full-Stack Developer based in Chennai, India with 3 years of experience architecting scalable web platforms, 160+ module RBAC admin portals, and Razorpay/PhonePe/PayPal integrations." />
+  <meta name="keywords"
+    content="Subananthan K, Subananthan Kasirajan, Full-Stack Developer, Frontend Developer, Chennai, React.js, Next.js, Node.js, Express.js, Laravel, CodeIgniter 4, Razorpay, PhonePe, Portfolio" />
+  <meta name="author" content="Subananthan K" />
+  <meta property="og:title" content="Subananthan K — Full-Stack Developer Portfolio" />
+  <meta property="og:description"
+    content="3+ years architecting scalable web platforms, 160+ module enterprise admin portals, and seamless fintech experiences." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              indigo: '#4F46E5',
+              violet: '#7C3AED',
+              sky: '#0EA5E9',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Iconify Web Component for crisp brand & UI icons -->
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</head>
+
+<body
+  class="antialiased selection:bg-indigo-500/20 selection:text-indigo-700 dark:selection:text-indigo-200 overflow-x-hidden transition-colors duration-300">
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="fixed top-0 left-0 right-0 h-[3px] z-50 bg-transparent pointer-events-none">
+    <div id="scroll-progress"
+      class="h-full w-0 bg-gradient-to-r from-indigo-600 via-violet-600 to-sky-500 transition-[width] duration-75 ease-out">
+    </div>
+  </div>
+
+  <!-- Luminous Background Layer: Floating Pastel Mesh Blobs + Dot Grid -->
+  <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none" aria-hidden="true">
+    <div class="absolute inset-0 bg-dot-grid"></div>
+    <div
+      class="animate-blob-1 absolute -top-28 -left-24 w-[420px] h-[420px] rounded-full bg-indigo-400/20 dark:bg-indigo-600/20 blur-[90px]">
+    </div>
+    <div
+      class="animate-blob-2 absolute top-32 -right-24 w-[440px] h-[440px] rounded-full bg-violet-400/20 dark:bg-violet-600/20 blur-[95px]">
+    </div>
+    <div
+      class="animate-blob-3 absolute bottom-10 left-1/3 w-[380px] h-[380px] rounded-full bg-sky-300/25 dark:bg-sky-600/15 blur-[95px]">
+    </div>
+  </div>
+
+
+  <!-- STICKY GLASSMORPHISM NAVBAR  ....  -->
+
+  <header class="sticky top-0 z-40 glass-nav transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-[70px]">
+        <!-- Brand Logo -->
+        <a href="#about" class="group flex items-center gap-2.5 focus:outline-none" aria-label="Subananthan K Home">
+          <div
+            class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-600 via-violet-600 to-sky-500 flex items-center justify-center text-white font-mono font-bold text-sm shadow-md shadow-indigo-500/25 group-hover:scale-105 transition-transform">
+            SK
+          </div>
+          <div class="flex flex-col leading-none">
+            <span class="font-extrabold text-base tracking-tight text-slate-900 dark:text-white">
+              Subananthan K<span class="text-indigo-600 dark:text-indigo-400">.</span>
+            </span>
+            <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400">MERN Stack Developer</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-1" aria-label="Primary Navigation">
+          <a href="#about"
+            class="nav-link active px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all">About</a>
+          <a href="#skills"
+            class="nav-link px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all">Skills</a>
+          <a href="#experience"
+            class="nav-link px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all">Experience</a>
+          <a href="#projects"
+            class="nav-link px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all">Projects</a>
+          <a href="#education"
+            class="nav-link px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all">Education</a>
+          <a href="#contact"
+            class="nav-link px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all">Contact</a>
+        </nav>
+
+        <!-- Right Controls: Theme Toggle, Check Resume, Mobile Menu -->
+        <div class="flex items-center gap-2 sm:gap-2.5">
+          <button id="theme-toggle" type="button" aria-label="Toggle Light and Dark Theme"
+            class="p-2.5 rounded-xl border border-slate-200 dark:border-white/10 bg-white/85 dark:bg-white/5 text-slate-700 dark:text-slate-200 hover:border-indigo-500/40 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all">
+            <iconify-icon icon="lucide:moon" width="18" class="block dark:hidden"></iconify-icon>
+            <iconify-icon icon="lucide:sun" width="18" class="hidden dark:block"></iconify-icon>
+          </button>
+
+          <button type="button" onclick="openResumeModal()"
+            class="btn-shine hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-indigo-600 to-violet-600 hover:brightness-110 shadow-md shadow-indigo-500/20 transition-all">
+            <iconify-icon icon="lucide:file-text" width="15"></iconify-icon>
+            <span>Check Resume</span>
+          </button>
+          <button type="button" onclick="handleProfileLink('GitHub')"
+            class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold text-indigo-600 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-500/15 border border-indigo-200 dark:border-indigo-500/30 hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-500 dark:hover:text-white transition-all shadow-sm">
+            <iconify-icon icon="mdi:github" width="16"></iconify-icon>
+            <span>GitHub Profile</span>
+          </button>
+          <!-- Mobile Drawer Trigger -->
+          <button id="mobile-menu-btn" type="button" aria-label="Open Navigation Menu" aria-expanded="false"
+            class="lg:hidden p-2.5 rounded-xl border border-slate-200 dark:border-white/10 bg-white/85 dark:bg-white/5 text-slate-700 dark:text-slate-200 hover:border-indigo-500/40 transition-all">
+            <iconify-icon icon="lucide:menu" width="20"></iconify-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-drawer-overlay"
+    class="fixed inset-0 z-50 bg-slate-900/45 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300"
+    aria-hidden="true"></div>
+  <aside id="mobile-drawer"
+    class="fixed top-0 right-0 z-50 h-full w-72 max-w-[85vw] bg-white dark:bg-[#0F1524] border-l border-slate-200 dark:border-white/10 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between p-6"
+    aria-label="Mobile Navigation">
+    <div>
+      <div class="flex items-center justify-between pb-5 border-b border-slate-200 dark:border-white/10">
+        <div class="flex items-center gap-2">
+          <span
+            class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center text-white font-mono text-xs font-bold">SK</span>
+          <span class="font-bold text-slate-900 dark:text-white">Menu</span>
+        </div>
+        <button id="mobile-drawer-close" type="button" aria-label="Close Menu"
+          class="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-white/10 text-slate-600 dark:text-slate-300">
+          <iconify-icon icon="lucide:x" width="20"></iconify-icon>
+        </button>
+      </div>
+      <nav class="mt-5 flex flex-col gap-1">
+        <a href="#about"
+          class="mobile-nav-link flex items-center gap-3 px-3.5 py-3 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-indigo-500/10 hover:text-indigo-600">
+          <iconify-icon icon="lucide:user" width="18"></iconify-icon> About
+        </a>
+        <a href="#skills"
+          class="mobile-nav-link flex items-center gap-3 px-3.5 py-3 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-indigo-500/10 hover:text-indigo-600">
+          <iconify-icon icon="lucide:cpu" width="18"></iconify-icon> Skills
+        </a>
+        <a href="#experience"
+          class="mobile-nav-link flex items-center gap-3 px-3.5 py-3 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-indigo-500/10 hover:text-indigo-600">
+          <iconify-icon icon="lucide:briefcase" width="18"></iconify-icon> Experience
+        </a>
+        <a href="#projects"
+          class="mobile-nav-link flex items-center gap-3 px-3.5 py-3 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-indigo-500/10 hover:text-indigo-600">
+          <iconify-icon icon="lucide:folder-git-2" width="18"></iconify-icon> Projects
+        </a>
+        <a href="#education"
+          class="mobile-nav-link flex items-center gap-3 px-3.5 py-3 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-indigo-500/10 hover:text-indigo-600">
+          <iconify-icon icon="lucide:graduation-cap" width="18"></iconify-icon> Education
+        </a>
+        <a href="#contact"
+          class="mobile-nav-link flex items-center gap-3 px-3.5 py-3 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-indigo-500/10 hover:text-indigo-600">
+          <iconify-icon icon="lucide:mail" width="18"></iconify-icon> Contact
+        </a>
+      </nav>
+    </div>
+
+    <div class="pt-5 border-t border-slate-200 dark:border-white/10">
+      <button type="button" onclick="closeMobileDrawer(); openResumeModal();"
+        class="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-indigo-600 to-violet-600 shadow-lg shadow-indigo-500/25">
+        <iconify-icon icon="lucide:file-text" width="16"></iconify-icon>
+        Check Resume
+      </button>
+    </div>
+  </aside>
+
+  <main>
+    <!--  HERO / ABOUT SECTION ...... -->
+    <section id="about" class="relative pt-12 pb-12 sm:pt-16 sm:pb-16 lg:pt-20 lg:pb-20 scroll-mt-20 overflow-hidden">
+      <!-- Interactive Mouse-Follow Soft Spotlight Glow -->
+      <div id="hero-spotlight"
+        class="pointer-events-none absolute inset-0 -z-10 opacity-0 transition-opacity duration-500" aria-hidden="true">
+      </div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+          <!-- Left Column: Intro, Typing Role, Summary & CTAs -->
+          <div class="lg:col-span-7 text-center lg:text-left order-2 lg:order-1">
+            <!-- Availability Pill -->
+            <div
+              class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-card text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200 mb-6">
+              <span class="relative flex h-2.5 w-2.5">
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+              </span>
+              <span>Available for Full-Stack / React Roles &bull; Chennai</span>
+            </div>
+
+            <!-- Headline -->
+            <h1
+              class="text-4xl sm:text-5xl lg:text-[54px] font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12]">
+              Hi, I am<br />
+              <span class="bg-gradient-to-r from-indigo-600 via-violet-600 to-sky-500 bg-clip-text text-transparent">
+                Subananthan K
+              </span>
+            </h1>
+
+            <!-- Typing Role Line -->
+            <div
+              class="mt-4 flex items-center justify-center lg:justify-start gap-2 text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100">
+              <span>I am a</span>
+              <span id="typing-role" class="text-indigo-600 dark:text-indigo-400">Full-Stack Developer</span>
+              <span class="cursor-blink text-violet-600 dark:text-sky-400 font-light">|</span>
+            </div>
+
+            <!-- Updated Resume Summary Bio -->
+            <p
+              class="mt-5 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Results-driven <strong class="text-slate-900 dark:text-white font-semibold">Full-Stack Developer</strong>
+              with 3 years of hands-on professional experience architecting, building, and maintaining scalable web
+              applications, custom CMS platforms, and RESTful APIs across <strong
+                class="text-slate-900 dark:text-white font-semibold">React.js, Next.js, Node.js, Express.js, PHP
+                (Laravel, CodeIgniter 4)</strong>, and payment integrations (<strong
+                class="text-slate-900 dark:text-white font-semibold">PhonePe, Razorpay, PayPal</strong>).
+            </p>
+
+            <!-- Hero CTAs -->
+            <div class="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-3.5">
+              <button type="button" onclick="openResumeModal()"
+                class="btn-shine inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl text-sm font-bold text-white bg-gradient-to-r from-indigo-600 via-violet-600 to-indigo-600 hover:brightness-110 shadow-lg shadow-indigo-500/30 hover:-translate-y-0.5 transition-all">
+                <iconify-icon icon="lucide:file-check-2" width="18"></iconify-icon>
+                <span>Check Resume</span>
+              </button>
+
+              <a href="#projects"
+                class="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl text-sm font-bold glass-card text-slate-800 dark:text-slate-100 hover:border-indigo-500/40 hover:text-indigo-600 dark:hover:text-indigo-400 hover:-translate-y-0.5 transition-all">
+                <span>Explore Projects</span>
+                <iconify-icon icon="lucide:arrow-down-right" width="17"></iconify-icon>
+              </a>
+
+              <a href="#contact"
+                class="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                <iconify-icon icon="lucide:mail" width="17"></iconify-icon>
+                <span>Contact Me</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Enlarged Circular Profile Showcase with Orbit Ring & 3 Floating Badges -->
+          <div class="lg:col-span-5 flex justify-center order-1 lg:order-2">
+            <div class="relative w-80 h-80 sm:w-[380px] sm:h-[380px] lg:w-[420px] lg:h-[420px] flex items-center justify-center">
+              <!-- Outer Rotating Dashed Orbit Ring -->
+              <div
+                class="animate-spin-slow absolute inset-0 rounded-full border-2 border-dashed border-indigo-400/50 dark:border-indigo-400/35">
+              </div>
+
+              <!-- Soft Luminous Halo -->
+              <div
+                class="absolute inset-4 rounded-full bg-gradient-to-tr from-indigo-500/25 via-violet-500/20 to-sky-400/30 blur-2xl">
+              </div>
+
+              <!-- Enlarged Circular Profile Container with Profile Photo... -->
+              <div
+                class="group relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[340px] lg:h-[340px] rounded-full p-2 bg-gradient-to-br from-indigo-600 via-violet-500 to-sky-400 shadow-2xl shadow-indigo-500/35 transition-transform duration-300 hover:scale-[1.02]">
+                <div
+                  class="relative w-full h-full rounded-full overflow-hidden bg-white dark:bg-slate-900 border-2 border-white/80 dark:border-slate-800 shadow-inner">
+                  <img src="assets/profile.jpg"
+                    onerror="this.src='assets/projects/profile.jpg';"
+                    class="w-full h-full object-cover object-[center_15%] transition-transform duration-500 group-hover:scale-105"
+                    alt="Subananthan K — Full-Stack Developer" />
+                </div>
+              </div>
+
+              <!--  Floating Tech Badges (Repositioned for Enlarged Circle) -->
+              <div
+                class="animate-float-1 absolute top-2 -left-2 sm:left-0 px-3.5 py-2 rounded-2xl glass-card flex items-center gap-2 shadow-xl border border-slate-200/80 dark:border-white/10 backdrop-blur-md">
+                <iconify-icon icon="logos:react" width="22"></iconify-icon>
+                <span class="font-mono text-xs font-bold text-slate-800 dark:text-slate-100">React.js</span>
+              </div>
+
+              <div
+                class="animate-float-2 absolute top-12 -right-3 sm:-right-2 px-3.5 py-2 rounded-2xl glass-card flex items-center gap-2 shadow-xl border border-slate-200/80 dark:border-white/10 backdrop-blur-md">
+                <iconify-icon icon="logos:nodejs-icon" width="22"></iconify-icon>
+                <span class="font-mono text-xs font-bold text-slate-800 dark:text-slate-100">Node.js</span>
+              </div>
+
+              <div class="animate-float-3 absolute -bottom-2 left-6 sm:left-4 glass-card px-4 py-2 rounded-2xl flex items-center gap-2 shadow-xl border border-slate-200/80 dark:border-white/10 backdrop-blur-md">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="font-mono text-xs font-bold text-slate-800 dark:text-slate-100">3+ Yrs Exp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Animated KPI Stat Cards -->
+        <div class="mt-14 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 reveal-scale">
+          <div class="glass-card glass-card-hover tilt-card rounded-2xl p-5 flex items-center gap-4">
+            <div
+              class="w-12 h-12 rounded-2xl bg-indigo-50 dark:bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
+              <iconify-icon icon="lucide:briefcase" width="22"></iconify-icon>
+            </div>
+            <div>
+              <div class="font-mono text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+                <span class="stat-counter" data-target="3" data-suffix="+">3+</span>
+              </div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Years Experience</div>
+            </div>
+          </div>
+
+          <div class="glass-card glass-card-hover tilt-card rounded-2xl p-5 flex items-center gap-4">
+            <div
+              class="w-12 h-12 rounded-2xl bg-violet-50 dark:bg-violet-500/15 text-violet-600 dark:text-violet-400 flex items-center justify-center shrink-0">
+              <iconify-icon icon="lucide:layers" width="22"></iconify-icon>
+            </div>
+            <div>
+              <div class="font-mono text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+                <span class="stat-counter" data-target="160" data-suffix="+">160+</span>
+              </div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Enterprise Modules</div>
+            </div>
+          </div>
+
+          <div class="glass-card glass-card-hover tilt-card rounded-2xl p-5 flex items-center gap-4">
+            <div
+              class="w-12 h-12 rounded-2xl bg-sky-50 dark:bg-sky-500/15 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+              <iconify-icon icon="lucide:rocket" width="22"></iconify-icon>
+            </div>
+            <div>
+              <div class="font-mono text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+                <span class="stat-counter" data-target="6" data-suffix="">6</span>
+              </div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Production Platforms</div>
+            </div>
+          </div>
+
+          <div class="glass-card glass-card-hover tilt-card rounded-2xl p-5 flex items-center gap-4">
+            <div
+              class="w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+              <iconify-icon icon="lucide:graduation-cap" width="22"></iconify-icon>
+            </div>
+            <div>
+              <div class="font-mono text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+                <span class="stat-counter" data-target="8.1" data-decimals="1" data-suffix="">8.1</span>
+              </div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">B.E. CGPA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Infinite Smooth Horizontal Tech Stack Marquee.... -->
+      <div
+        class="mt-14 sm:mt-16 border-y border-slate-200/80 dark:border-white/10 bg-white/60 dark:bg-slate-900/40 backdrop-blur-md py-4 overflow-hidden marquee-wrapper">
+        <div class="marquee-track flex items-center gap-4">
+          <!-- Set 1 -->
+          <div class="flex items-center gap-4 pr-4">
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:react" width="18"></iconify-icon> React.js</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="simple-icons:nextdotjs" width="16"></iconify-icon> Next.js</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:nodejs-icon" width="18"></iconify-icon> Node.js</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="simple-icons:express" width="17"></iconify-icon> Express.js</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:laravel" width="18"></iconify-icon> Laravel</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:codeigniter-icon" width="17"></iconify-icon> CodeIgniter 4</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:mongodb-icon" width="18"></iconify-icon> MongoDB</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:mysql-icon" width="18"></iconify-icon> MySQL</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:postgresql" width="18"></iconify-icon> PostgreSQL</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:redis" width="18"></iconify-icon> Redis</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="simple-icons:razorpay" width="16" class="text-blue-600"></iconify-icon> Razorpay</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="simple-icons:phonepe" width="16" class="text-purple-600"></iconify-icon> PhonePe</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:paypal" width="16"></iconify-icon> PayPal</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:tailwindcss-icon" width="18"></iconify-icon> Tailwind CSS</span>
+          </div>
+          <!-- Set 2 (Seamless Loop Duplicate) -->
+          <div class="flex items-center gap-4 pr-4" aria-hidden="true">
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:react" width="18"></iconify-icon> React.js</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="simple-icons:nextdotjs" width="16"></iconify-icon> Next.js</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:nodejs-icon" width="18"></iconify-icon> Node.js</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="simple-icons:express" width="17"></iconify-icon> Express.js</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:laravel" width="18"></iconify-icon> Laravel</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:codeigniter-icon" width="17"></iconify-icon> CodeIgniter 4</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:mongodb-icon" width="18"></iconify-icon> MongoDB</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:mysql-icon" width="18"></iconify-icon> MySQL</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:postgresql" width="18"></iconify-icon> PostgreSQL</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:redis" width="18"></iconify-icon> Redis</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="simple-icons:razorpay" width="16" class="text-blue-600"></iconify-icon> Razorpay</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="simple-icons:phonepe" width="16" class="text-purple-600"></iconify-icon> PhonePe</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:paypal" width="16"></iconify-icon> PayPal</span>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 shadow-sm font-mono text-xs font-bold text-slate-700 dark:text-slate-200"><iconify-icon
+                icon="logos:tailwindcss-icon" width="18"></iconify-icon> Tailwind CSS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  TECHNICAL SKILLS SECTION ...... -->
+
+    <section id="skills" class="py-16 sm:py-24 scroll-mt-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10 reveal">
+          <span
+            class="inline-block px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-500/15 text-indigo-600 dark:text-indigo-300 font-mono text-xs font-semibold tracking-wider uppercase mb-3">
+            Technical Arsenal
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            Technical Skills
+          </h2>
+          <p class="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-400">
+            Every language, framework, database, payment gateway, and engineering tool I work with in production.
+          </p>
+        </div>
+
+        <!-- Interactive Category Filter Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-10 reveal" role="tablist"
+          aria-label="Filter Technical Skills">
+          <button type="button" data-skill-filter="all"
+            class="skill-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-indigo-600 text-white shadow-md shadow-indigo-500/25">All
+            Skills</button>
+          <button type="button" data-skill-filter="frontend"
+            class="skill-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all glass-card text-slate-700 dark:text-slate-200 hover:border-indigo-500/40">Frontend</button>
+          <button type="button" data-skill-filter="backend"
+            class="skill-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all glass-card text-slate-700 dark:text-slate-200 hover:border-indigo-500/40">Backend
+            &amp; Frameworks</button>
+          <button type="button" data-skill-filter="databases"
+            class="skill-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all glass-card text-slate-700 dark:text-slate-200 hover:border-indigo-500/40">Databases</button>
+          <button type="button" data-skill-filter="integrations"
+            class="skill-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all glass-card text-slate-700 dark:text-slate-200 hover:border-indigo-500/40">Payments
+            &amp; Integrations</button>
+          <button type="button" data-skill-filter="tools"
+            class="skill-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all glass-card text-slate-700 dark:text-slate-200 hover:border-indigo-500/40">Tools
+            &amp; Deployment</button>
+        </div>
+
+        <!-- Grouped Glassmorphism Skill Cards Grid (Populated via JS & Filterable) -->
+        <div id="skills-categories-container" class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal">
+          <!-- Rendered by renderSkillCategories() -->
+        </div>
+      </div>
+    </section>
+
+
+    <!-- .... WORK EXPERIENCE SECTION ......  -->
+  
+    <section id="experience" class="py-16 sm:py-24 scroll-mt-20">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+          <span
+            class="inline-block px-3 py-1 rounded-full bg-violet-50 dark:bg-violet-500/15 text-violet-600 dark:text-violet-300 font-mono text-xs font-semibold tracking-wider uppercase mb-3">
+            Career Path
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            Work Experience
+          </h2>
+          <p class="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-400">
+            My professional journey building enterprise platforms, responsive SPAs, and secure fintech workflows.
+          </p>
+        </div>
+
+        <div id="experience-timeline" class="relative pl-7 sm:pl-11 space-y-8">
+          <!-- Background Rail -->
+          <div
+            class="absolute left-[11px] sm:left-[17px] top-3 bottom-3 w-[2px] bg-slate-200 dark:bg-white/10 rounded-full"
+            aria-hidden="true"></div>
+          <!-- Animated Scroll-Filled Progress Rail -->
+          <div id="experience-progress-line"
+            class="absolute left-[11px] sm:left-[17px] top-3 w-[2px] h-0 bg-gradient-to-b from-indigo-600 via-violet-500 to-sky-400 rounded-full transition-[height] duration-150 ease-out"
+            aria-hidden="true"></div>
+
+          <!-- Experience 1: Gharuda Infotech -->
+          <article class="relative reveal">
+            <div
+              class="absolute -left-7 sm:-left-11 top-6 w-6 h-6 sm:w-9 sm:h-9 rounded-full bg-white dark:bg-slate-900 border-2 border-indigo-600 flex items-center justify-center shadow-md shadow-indigo-500/20">
+              <span class="w-2.5 h-2.5 rounded-full bg-indigo-600 animate-pulse"></span>
+            </div>
+
+            <div class="glass-card glass-card-hover rounded-2xl p-6 sm:p-8">
+              <div
+                class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 pb-5 border-b border-slate-200/80 dark:border-white/10">
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-600 to-violet-600 text-white flex items-center justify-center font-mono font-bold text-base shadow-md shadow-indigo-500/20 shrink-0">
+                    GI
+                  </div>
+                  <div>
+                    <div class="flex flex-wrap items-center gap-2">
+                      <h3 class="text-xl font-extrabold text-slate-900 dark:text-white">Frontend Developer</h3>
+                      <span
+                        class="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-emerald-50 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/25">Current</span>
+                    </div>
+                    <p class="text-indigo-600 dark:text-indigo-400 font-bold text-sm sm:text-base mt-0.5">Gharuda
+                      Infotech</p>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-wrap sm:flex-col sm:items-end gap-2 sm:gap-1 font-mono text-xs text-slate-500 dark:text-slate-400">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-white/5">
+                    <iconify-icon icon="lucide:calendar" width="14"></iconify-icon> Dec 2024 – Present
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-white/5">
+                    <iconify-icon icon="lucide:map-pin" width="14"></iconify-icon> Chennai
+                  </span>
+                </div>
+              </div>
+
+              <ul class="mt-5 space-y-3 text-sm sm:text-[15px] text-slate-600 dark:text-slate-300 leading-relaxed">
+                <li class="flex items-start gap-3">
+                  <iconify-icon icon="lucide:check-circle-2" width="18"
+                    class="text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5"></iconify-icon>
+                  <span>Architected and maintained scalable full-stack web platforms using <strong
+                      class="text-slate-900 dark:text-white font-semibold">CodeIgniter 4 (MVC), Laravel, and
+                      React.js</strong>.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <iconify-icon icon="lucide:check-circle-2" width="18"
+                    class="text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5"></iconify-icon>
+                  <span>Developed and consumed secure <strong
+                      class="text-slate-900 dark:text-white font-semibold">RESTful APIs</strong> enabling seamless,
+                    real-time communication between React.js frontend interfaces and backend services.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <iconify-icon icon="lucide:check-circle-2" width="18"
+                    class="text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5"></iconify-icon>
+                  <span>Integrated enterprise payment solutions including <strong
+                      class="text-slate-900 dark:text-white font-semibold">PhonePe and Razorpay</strong> for e-commerce
+                    checkouts and subscription workflows.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <iconify-icon icon="lucide:check-circle-2" width="18"
+                    class="text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5"></iconify-icon>
+                  <span>Built dynamic administrative dashboards and CMS modules with <strong
+                      class="text-slate-900 dark:text-white font-semibold">role-based access control (RBAC)</strong>,
+                    AJAX-based asynchronous form submissions, and FilePond media upload management.</span>
+                </li>
+              </ul>
+
+              <div class="mt-6 flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 rounded-lg bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-100 dark:border-indigo-500/20 font-mono text-xs font-medium text-indigo-700 dark:text-indigo-300">React.js</span>
+                <span
+                  class="px-3 py-1 rounded-lg bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-100 dark:border-indigo-500/20 font-mono text-xs font-medium text-indigo-700 dark:text-indigo-300">CodeIgniter
+                  4</span>
+                <span
+                  class="px-3 py-1 rounded-lg bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-100 dark:border-indigo-500/20 font-mono text-xs font-medium text-indigo-700 dark:text-indigo-300">Laravel</span>
+                <span
+                  class="px-3 py-1 rounded-lg bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-100 dark:border-indigo-500/20 font-mono text-xs font-medium text-indigo-700 dark:text-indigo-300">Razorpay</span>
+                <span
+                  class="px-3 py-1 rounded-lg bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-100 dark:border-indigo-500/20 font-mono text-xs font-medium text-indigo-700 dark:text-indigo-300">PhonePe</span>
+                <span
+                  class="px-3 py-1 rounded-lg bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-100 dark:border-indigo-500/20 font-mono text-xs font-medium text-indigo-700 dark:text-indigo-300">FilePond
+                  &amp; RBAC</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Experience 2: Ebrain Technologies -->
+          <article class="relative reveal">
+            <div
+              class="absolute -left-7 sm:-left-11 top-6 w-6 h-6 sm:w-9 sm:h-9 rounded-full bg-white dark:bg-slate-900 border-2 border-violet-600 flex items-center justify-center shadow-md shadow-violet-500/20">
+              <span class="w-2.5 h-2.5 rounded-full bg-violet-600"></span>
+            </div>
+
+            <div class="glass-card glass-card-hover rounded-2xl p-6 sm:p-8">
+              <div
+                class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 pb-5 border-b border-slate-200/80 dark:border-white/10">
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-gradient-to-br from-violet-600 to-sky-500 text-white flex items-center justify-center font-mono font-bold text-base shadow-md shadow-violet-500/20 shrink-0">
+                    ET
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-extrabold text-slate-900 dark:text-white">Frontend Developer</h3>
+                    <p class="text-violet-600 dark:text-violet-400 font-bold text-sm sm:text-base mt-0.5">Ebrain
+                      Technologies</p>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-wrap sm:flex-col sm:items-end gap-2 sm:gap-1 font-mono text-xs text-slate-500 dark:text-slate-400">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-white/5">
+                    <iconify-icon icon="lucide:calendar" width="14"></iconify-icon> Mar 2023 – Dec 2024
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-white/5">
+                    <iconify-icon icon="lucide:map-pin" width="14"></iconify-icon> Thanjavur
+                  </span>
+                </div>
+              </div>
+
+              <ul class="mt-5 space-y-3 text-sm sm:text-[15px] text-slate-600 dark:text-slate-300 leading-relaxed">
+                <li class="flex items-start gap-3">
+                  <iconify-icon icon="lucide:check-circle-2" width="18"
+                    class="text-violet-600 dark:text-violet-400 shrink-0 mt-0.5"></iconify-icon>
+                  <span>Engineered and maintained high-performance, responsive single-page web applications using
+                    <strong class="text-slate-900 dark:text-white font-semibold">React.js, JavaScript (ES6+), HTML5, and
+                      Tailwind CSS / Bootstrap 5</strong> across diverse screens.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <iconify-icon icon="lucide:check-circle-2" width="18"
+                    class="text-violet-600 dark:text-violet-400 shrink-0 mt-0.5"></iconify-icon>
+                  <span>Integrated RESTful APIs using <strong class="text-slate-900 dark:text-white font-semibold">Axios
+                      and Fetch API</strong>, architecting asynchronous data handling patterns and managing complex
+                    state flows with <strong class="text-slate-900 dark:text-white font-semibold">Redux Toolkit and
+                      Context API</strong>.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <iconify-icon icon="lucide:check-circle-2" width="18"
+                    class="text-violet-600 dark:text-violet-400 shrink-0 mt-0.5"></iconify-icon>
+                  <span>Developed reusable design systems, modular UI components, and dynamic form workflows with robust
+                    client-side validation, reducing code duplication and accelerating feature delivery.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <iconify-icon icon="lucide:check-circle-2" width="18"
+                    class="text-violet-600 dark:text-violet-400 shrink-0 mt-0.5"></iconify-icon>
+                  <span>Optimized DOM rendering efficiency, asset compression, and bundle size, significantly enhancing
+                    page speed, runtime responsiveness, and <strong
+                      class="text-slate-900 dark:text-white font-semibold">Core Web Vitals</strong> metrics.</span>
+                </li>
+              </ul>
+
+              <div class="mt-6 flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 rounded-lg bg-violet-50 dark:bg-violet-500/10 border border-violet-100 dark:border-violet-500/20 font-mono text-xs font-medium text-violet-700 dark:text-violet-300">React.js</span>
+                <span
+                  class="px-3 py-1 rounded-lg bg-violet-50 dark:bg-violet-500/10 border border-violet-100 dark:border-violet-500/20 font-mono text-xs font-medium text-violet-700 dark:text-violet-300">Redux
+                  Toolkit</span>
+                <span
+                  class="px-3 py-1 rounded-lg bg-violet-50 dark:bg-violet-500/10 border border-violet-100 dark:border-violet-500/20 font-mono text-xs font-medium text-violet-700 dark:text-violet-300">Tailwind
+                  CSS</span>
+                <span
+                  class="px-3 py-1 rounded-lg bg-violet-50 dark:bg-violet-500/10 border border-violet-100 dark:border-violet-500/20 font-mono text-xs font-medium text-violet-700 dark:text-violet-300">Bootstrap
+                  5</span>
+                <span
+                  class="px-3 py-1 rounded-lg bg-violet-50 dark:bg-violet-500/10 border border-violet-100 dark:border-violet-500/20 font-mono text-xs font-medium text-violet-700 dark:text-violet-300">Axios</span>
+                <span
+                  class="px-3 py-1 rounded-lg bg-violet-50 dark:bg-violet-500/10 border border-violet-100 dark:border-violet-500/20 font-mono text-xs font-medium text-violet-700 dark:text-violet-300">Core
+                  Web Vitals</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--... FEATURED PROJECTS SECTION (4 CARDS COMPACT & PREMIUM) ....  -->
+    <section id="projects" class="py-14 sm:py-20 scroll-mt-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10 reveal">
+          <span
+            class="inline-block px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-500/15 text-indigo-600 dark:text-indigo-300 font-mono text-xs font-semibold tracking-wider uppercase mb-3">
+            Featured Work
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            Projects &amp; Case Studies
+          </h2>
+          <p class="mt-2.5 text-sm sm:text-base text-slate-600 dark:text-slate-400">
+            Production systems engineered across real estate, e-commerce, livestock operations, and healthcare.
+          </p>
+        </div>
+
+        <!-- 4 Projects Responsive Grid (2x2) -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-7">
+
+          <!-- PROJECT 1: BOOLOK — REAL ESTATE PLATFORM (WEB + ADMIN)            -->
+          <article data-project-id="boolok" data-project-card="boolok"
+            class="project-card glass-card glass-card-hover rounded-3xl overflow-hidden flex flex-col reveal border border-slate-200/80 dark:border-white/10 shadow-md shadow-slate-200/30 dark:shadow-none transition-all duration-300">
+            
+            <!-- Compact Preview Frame -->
+            <div class="bg-slate-100/90 dark:bg-slate-900/90 border-b border-slate-200/80 dark:border-white/10">
+              <!-- Chrome Header -->
+              <div class="flex items-center justify-between px-3.5 py-2 border-b border-slate-200/80 dark:border-white/10 bg-white/80 dark:bg-slate-900">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                  <span class="proj-chrome-url ml-2 px-2 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 font-mono text-[10px] font-semibold text-slate-600 dark:text-slate-300">
+                    boolok.com / properties
+                  </span>
+                </div>
+                <span class="text-[10px] font-mono font-semibold text-indigo-600 dark:text-indigo-400">
+                  Full-Stack Platform
+                </span>
+              </div>
+
+              <!-- Viewport Container with Floating Badges & Switch Dock -->
+              <div class="relative h-52 sm:h-56 bg-slate-950 overflow-hidden group">
+                
+                <!-- Floating Top-Left View Badge (Dynamic Web / Admin) -->
+                <div class="absolute top-2.5 left-2.5 z-20 pointer-events-none">
+                  <span class="proj-view-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-blue-600 text-white font-mono text-[11px] font-bold shadow-md shadow-blue-500/25 transition-all">
+                    <iconify-icon icon="lucide:monitor" width="12"></iconify-icon>
+                    <span>Web View</span>
+                  </span>
+                </div>
+
+                <!-- Floating Top-Right Category Pill -->
+                <div class="absolute top-2.5 right-2.5 z-20 pointer-events-none">
+                  <span class="inline-flex items-center px-2.5 py-1 rounded-xl bg-slate-900/90 text-white font-mono text-[11px] font-bold backdrop-blur-md border border-white/10 shadow-sm">
+                    Real Estate
+                  </span>
+                </div>
+
+                <!-- Floating Bottom-Right Interactive Web/Admin Switch Dock -->
+                <div class="absolute bottom-2.5 right-2.5 z-20 flex items-center p-1 rounded-full bg-slate-900/90 backdrop-blur-md border border-white/15 shadow-xl">
+                  <button type="button" onclick="switchProjectView('boolok', 'web')"
+                    class="proj-view-btn-web px-2.5 py-0.5 rounded-full text-[11px] font-bold transition-all flex items-center gap-1 bg-blue-600 text-white shadow-sm"
+                    title="Switch to Web View">
+                    <iconify-icon icon="lucide:globe" width="12"></iconify-icon>
+                    <span>Web</span>
+                  </button>
+                  <button type="button" onclick="switchProjectView('boolok', 'admin')"
+                    class="proj-view-btn-admin px-2.5 py-0.5 rounded-full text-[11px] font-medium text-slate-300 hover:text-white transition-all flex items-center gap-1"
+                    title="Switch to Admin View">
+                    <iconify-icon icon="lucide:shield" width="12"></iconify-icon>
+                    <span>Admin</span>
+                  </button>
+                </div>
+
+                <!-- PANEL 1: WEB VIEW -->
+                <div class="proj-panel-web w-full h-full relative" data-scroller-for="boolok-web">
+                  <img src="assets/projects/boolok-web.png" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');" alt="Boolok Web Preview" class="w-full h-full object-cover object-top" />
+                  <div class="builtin-mockup w-full h-full text-left bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 flex flex-col justify-between">
+                    <div class="p-3.5 bg-gradient-to-br from-indigo-600 via-blue-600 to-sky-500 text-white">
+                      <div class="flex items-center justify-between text-[10px] font-bold mb-1.5 opacity-90">
+                        <span>BOOLOK REALTY</span>
+                        <div class="flex gap-2 text-[9px]"><span>Buy</span><span>Rent</span><span>Services</span></div>
+                      </div>
+                      <div class="text-xs sm:text-sm font-extrabold leading-tight">Find Verified Properties Across 7 Categories</div>
+                      <p class="text-[9px] text-blue-100 mt-0.5">Geospatial Google Maps search &amp; instant Razorpay EMI booking.</p>
+                      <div class="mt-2 flex gap-1.5 bg-white/95 text-slate-700 rounded-lg p-1 text-[9px] font-mono">
+                        <span class="flex-1 truncate px-1">Search Chennai, OMR, Plots, Villas...</span>
+                        <span class="px-2 py-0.5 rounded bg-indigo-600 text-white font-bold">Search</span>
+                      </div>
+                    </div>
+                    <div class="p-2.5 bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-white/10 flex items-center justify-between text-[9px]">
+                      <div class="flex items-center gap-1.5 text-indigo-600 dark:text-indigo-400 font-semibold font-mono">
+                        <iconify-icon icon="lucide:map-pin" width="12"></iconify-icon> Google Maps API Boundary
+                      </div>
+                      <span class="px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-bold font-mono">Razorpay EMI</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PANEL 2: ADMIN VIEW (MATCHING DASHBOARD) -->
+                <div class="proj-panel-admin hidden w-full h-full relative" data-scroller-for="boolok-admin">
+                  <img src="assets/projects/boolok-admin.png" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');" alt="Boolok Admin Preview" class="w-full h-full object-cover object-top" />
+                  <div class="builtin-mockup w-full h-full text-left bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-slate-100 flex flex-col justify-between">
+                    <div class="px-3 py-1.5 bg-white dark:bg-slate-900 border-b border-slate-200/80 dark:border-white/10 flex items-center justify-between text-[10px]">
+                      <span class="font-bold text-blue-600 dark:text-blue-400 font-mono flex items-center gap-1">
+                        <iconify-icon icon="lucide:layout-dashboard" width="12"></iconify-icon> BOOLOK ADMIN
+                      </span>
+                      <span class="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300 font-mono text-[8px] font-bold">160+ Modules</span>
+                    </div>
+                    <div class="flex flex-1 overflow-hidden">
+                      <div class="w-20 bg-[#1e293b] text-slate-300 p-1.5 flex flex-col gap-1 text-[8px] font-medium border-r border-slate-700/50">
+                        <div class="px-1 py-0.5 rounded bg-blue-600 text-white font-bold">Dashboard</div>
+                        <div class="px-1 py-0.5 text-slate-400">Master Page</div>
+                        <div class="px-1 py-0.5 text-slate-400">Staff RBAC</div>
+                        <div class="px-1 py-0.5 text-slate-400">Property</div>
+                      </div>
+                      <div class="flex-1 p-2 bg-white dark:bg-slate-900/90 flex flex-col justify-between">
+                        <div class="grid grid-cols-4 gap-1 mb-1">
+                          <div class="p-1 rounded bg-slate-50 dark:bg-slate-800 text-center">
+                            <div class="text-[7px] text-slate-500">New</div>
+                            <div class="text-[10px] font-black text-slate-800 dark:text-white">45</div>
+                          </div>
+                          <div class="p-1 rounded bg-slate-50 dark:bg-slate-800 text-center">
+                            <div class="text-[7px] text-slate-500">Agreements</div>
+                            <div class="text-[10px] font-black text-slate-800 dark:text-white">215</div>
+                          </div>
+                          <div class="p-1 rounded bg-slate-50 dark:bg-slate-800 text-center">
+                            <div class="text-[7px] text-slate-500">Live</div>
+                            <div class="text-[10px] font-black text-slate-800 dark:text-white">455</div>
+                          </div>
+                          <div class="p-1 rounded bg-slate-50 dark:bg-slate-800 text-center">
+                            <div class="text-[7px] text-slate-500">Cancel</div>
+                            <div class="text-[10px] font-black text-slate-800 dark:text-white">174</div>
+                          </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-1.5 p-1.5 rounded-lg bg-slate-50 dark:bg-slate-800 text-[8px]">
+                          <div>
+                            <div class="font-bold text-slate-700 dark:text-slate-300">Property Activities</div>
+                            <div class="text-[7px] text-emerald-600 mt-0.5 font-mono">Live: 48% &bull; Closed: 20%</div>
+                          </div>
+                          <div>
+                            <div class="font-bold text-slate-700 dark:text-slate-300">Monthly Revenue</div>
+                            <div class="text-[7px] text-indigo-600 mt-0.5 font-mono">₹22.1L &bull; Triage Active</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Card Body (Compact & Exactly 2 Points) -->
+            <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                  Boolok – Real Estate Listing Platform
+                </h3>
+                <div class="mt-1.5 text-xs text-slate-600 dark:text-slate-300">
+                  <span class="font-bold text-blue-600 dark:text-blue-400">Stack:</span> React.js, CodeIgniter 4, RESTful APIs, MySQL, Google Maps API, Razorpay
+                </div>
+                <p class="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Full-stack real estate platform featuring dynamic property discovery, faceted filtering, and an enterprise RBAC operational suite.
+                </p>
+
+                <!-- Exactly 2 Points -->
+                <ul class="mt-3 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                  <li class="flex items-start gap-2">
+                    <iconify-icon icon="lucide:check" class="text-blue-600 dark:text-blue-400 font-bold shrink-0 mt-0.5 text-sm"></iconify-icon>
+                    <span>Integrated Google Maps API using latitude/longitude mapping for interactive geospatial property discovery across 7 categories.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <iconify-icon icon="lucide:check" class="text-blue-600 dark:text-blue-400 font-bold shrink-0 mt-0.5 text-sm"></iconify-icon>
+                    <span>Architected enterprise Admin &amp; Staff portal with 160+ functional modules, multi-tier RBAC, and Razorpay full/EMI payments.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Action Button -->
+              <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10">
+                <button type="button" onclick="openProjectModal('boolok')"
+                  class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 shadow-md shadow-indigo-500/20 transition-all">
+                  <span>View Case Study</span>
+                  <iconify-icon icon="lucide:arrow-up-right" width="15"></iconify-icon>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: TTS BROTHERS — MERN STACK E-COMMERCE (ADMIN + WEB)     -->
+          <article data-project-id="tts" data-project-card="tts"
+            class="project-card glass-card glass-card-hover rounded-3xl overflow-hidden flex flex-col reveal border border-slate-200/80 dark:border-white/10 shadow-md shadow-slate-200/30 dark:shadow-none transition-all duration-300">
+            
+            <!-- Compact Preview Frame -->
+            <div class="bg-slate-100/90 dark:bg-slate-900/90 border-b border-slate-200/80 dark:border-white/10">
+              <!-- Chrome Header -->
+              <div class="flex items-center justify-between px-3.5 py-2 border-b border-slate-200/80 dark:border-white/10 bg-white/80 dark:bg-slate-900">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                  <span class="proj-chrome-url ml-2 px-2 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 font-mono text-[10px] font-semibold text-slate-600 dark:text-slate-300">
+                    tts-brothers.de / store
+                  </span>
+                </div>
+                <span class="text-[10px] font-mono font-semibold text-sky-600 dark:text-sky-400">
+                  MERN Stack Platform
+                </span>
+              </div>
+
+              <!-- Viewport Container with Floating Badges & Switch Dock -->
+              <div class="relative h-52 sm:h-56 bg-slate-950 overflow-hidden group">
+                
+                <!-- Floating Top-Left View Badge (Dynamic Web / Admin) -->
+                <div class="absolute top-2.5 left-2.5 z-20 pointer-events-none">
+                  <span class="proj-view-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-blue-600 text-white font-mono text-[11px] font-bold shadow-md shadow-blue-500/25 transition-all">
+                    <iconify-icon icon="lucide:monitor" width="12"></iconify-icon>
+                    <span>Web View</span>
+                  </span>
+                </div>
+
+                <!-- Floating Top-Right Category Pill -->
+                <div class="absolute top-2.5 right-2.5 z-20 pointer-events-none">
+                  <span class="inline-flex items-center px-2.5 py-1 rounded-xl bg-slate-900/90 text-white font-mono text-[11px] font-bold backdrop-blur-md border border-white/10 shadow-sm">
+                    MERN Stack
+                  </span>
+                </div>
+
+                <!-- Floating Bottom-Right Interactive Web/Admin Switch Dock -->
+                <div class="absolute bottom-2.5 right-2.5 z-20 flex items-center p-1 rounded-full bg-slate-900/90 backdrop-blur-md border border-white/15 shadow-xl">
+                  <button type="button" onclick="switchProjectView('tts', 'web')"
+                    class="proj-view-btn-web px-2.5 py-0.5 rounded-full text-[11px] font-bold transition-all flex items-center gap-1 bg-blue-600 text-white shadow-sm"
+                    title="Switch to Web View">
+                    <iconify-icon icon="lucide:globe" width="12"></iconify-icon>
+                    <span>Web</span>
+                  </button>
+                  <button type="button" onclick="switchProjectView('tts', 'admin')"
+                    class="proj-view-btn-admin px-2.5 py-0.5 rounded-full text-[11px] font-medium text-slate-300 hover:text-white transition-all flex items-center gap-1"
+                    title="Switch to Admin View">
+                    <iconify-icon icon="lucide:shield" width="12"></iconify-icon>
+                    <span>Admin</span>
+                  </button>
+                </div>
+
+                <!-- PANEL 1: WEB VIEW -->
+                <div class="proj-panel-web w-full h-full relative" data-scroller-for="tts-web">
+                  <img src="assets/projects/tts-web.png" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');" alt="TTS Web Preview" class="w-full h-full object-cover object-top" />
+                  <div class="builtin-mockup w-full h-full text-left bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 flex flex-col justify-between">
+                    <div class="p-3.5 bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 text-white">
+                      <div class="flex items-center justify-between text-[10px] font-bold mb-1.5">
+                        <span>TTS BROTHERS GMBH</span>
+                        <span class="px-2 py-0.5 rounded-full bg-white/20 font-mono text-[8px] font-bold">DE | EN</span>
+                      </div>
+                      <div class="text-xs sm:text-sm font-extrabold leading-tight">International E-Commerce Storefront (Germany)</div>
+                      <p class="text-[9px] text-sky-100 mt-0.5">Real-time i18next German &amp; English switching with PayPal checkout.</p>
+                    </div>
+                    <div class="p-2.5 grid grid-cols-2 gap-2 text-[9px]">
+                      <div class="p-1.5 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 flex justify-between items-center">
+                        <div>
+                          <div class="font-bold">Hardware Kit</div>
+                          <div class="text-blue-600 font-extrabold">&euro;129.00</div>
+                        </div>
+                        <span class="px-1.5 py-0.5 rounded bg-blue-600 text-white font-bold text-[8px]">+ Cart</span>
+                      </div>
+                      <div class="p-1.5 rounded-lg bg-blue-50 dark:bg-blue-950/40 border border-blue-200/70 dark:border-blue-500/20 flex justify-between items-center">
+                        <div>
+                          <div class="font-bold text-blue-900 dark:text-blue-200">PayPal REST</div>
+                          <div class="text-[8px] text-blue-700/80">Cross-Border</div>
+                        </div>
+                        <span class="px-2 py-0.5 rounded bg-blue-600 text-white font-bold text-[8px]">PayPal</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PANEL 2: ADMIN VIEW -->
+                <div class="proj-panel-admin hidden w-full h-full relative" data-scroller-for="tts-admin">
+                  <img src="assets/projects/tts-admin.png" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');" alt="TTS Admin Preview" class="w-full h-full object-cover object-top" />
+                  <div class="builtin-mockup w-full h-full text-left bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-slate-100 flex flex-col justify-between">
+                    <div class="px-3 py-1.5 bg-white dark:bg-slate-900 border-b border-slate-200/80 dark:border-white/10 flex items-center justify-between text-[10px]">
+                      <span class="font-bold text-sky-600 dark:text-sky-400 font-mono flex items-center gap-1">
+                        <iconify-icon icon="lucide:boxes" width="12"></iconify-icon> TTS OPERATIONS
+                      </span>
+                      <span class="px-1.5 py-0.5 rounded bg-sky-50 text-sky-700 dark:bg-sky-950/60 dark:text-sky-300 font-mono text-[8px] font-bold">EU Hub</span>
+                    </div>
+                    <div class="p-2.5 flex-1 flex flex-col justify-between">
+                      <div class="grid grid-cols-3 gap-1.5">
+                        <div class="p-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 text-center">
+                          <div class="text-[7px] text-slate-500">Catalog</div>
+                          <div class="text-[10px] font-bold text-sky-600">DE &amp; EN Sync</div>
+                        </div>
+                        <div class="p-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 text-center">
+                          <div class="text-[7px] text-slate-500">Returns</div>
+                          <div class="text-[10px] font-bold text-amber-600">Automated</div>
+                        </div>
+                        <div class="p-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 text-center">
+                          <div class="text-[7px] text-slate-500">Refunds</div>
+                          <div class="text-[10px] font-bold text-emerald-600">PayPal Active</div>
+                        </div>
+                      </div>
+                      <div class="p-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 text-[8px]">
+                        <div class="font-bold text-slate-700 dark:text-slate-300 mb-0.5">Post-Order Lifecycle Tracker</div>
+                        <div class="flex justify-between text-[7px] text-slate-500">
+                          <span>#DE-8821 Return Pickup</span>
+                          <span class="text-emerald-600 font-mono font-bold">Reconciled</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Card Body (Compact & Exactly 2 Points) -->
+            <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                  TTS Brothers – Multilingual E-Commerce Platform
+                </h3>
+                <div class="mt-1.5 text-xs text-slate-600 dark:text-slate-300">
+                  <span class="font-bold text-blue-600 dark:text-blue-400">Stack:</span> MongoDB, Express.js, React.js, Node.js (MERN), Redux Toolkit, i18next, PayPal REST API
+                </div>
+                <p class="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  International MERN stack e-commerce ecosystem built for a German client with real-time bilingual localization and order lifecycle management.
+                </p>
+
+                <!-- Exactly 2 Points -->
+                <ul class="mt-3 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                  <li class="flex items-start gap-2">
+                    <iconify-icon icon="lucide:check" class="text-blue-600 dark:text-blue-400 font-bold shrink-0 mt-0.5 text-sm"></iconify-icon>
+                    <span>Built bilingual storefront with real-time German (DE) and English (EN) i18next localization and cross-border PayPal checkout.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <iconify-icon icon="lucide:check" class="text-blue-600 dark:text-blue-400 font-bold shrink-0 mt-0.5 text-sm"></iconify-icon>
+                    <span>Engineered Operations Admin Portal for synchronized bilingual SKU management and automated return/refund lifecycles.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Action Button -->
+              <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10">
+                <button type="button" onclick="openProjectModal('tts')"
+                  class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 shadow-md shadow-indigo-500/20 transition-all">
+                  <span>View Case Study</span>
+                  <iconify-icon icon="lucide:arrow-up-right" width="15"></iconify-icon>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: FARM MANAGEMENT — LIVESTOCK PORTAL (PORTAL ONLY)       -->
+          <article data-project-id="farm-admin" data-project-card="farm-admin"
+            class="project-card glass-card glass-card-hover rounded-3xl overflow-hidden flex flex-col reveal border border-slate-200/80 dark:border-white/10 shadow-md shadow-slate-200/30 dark:shadow-none transition-all duration-300">
+            
+            <!-- Compact Preview Frame (No Web/Admin Tabs!) -->
+            <div class="bg-slate-100/90 dark:bg-slate-900/90 border-b border-slate-200/80 dark:border-white/10">
+              <!-- Chrome Header -->
+              <div class="flex items-center justify-between px-3.5 py-2 border-b border-slate-200/80 dark:border-white/10 bg-white/80 dark:bg-slate-900">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                  <span class="ml-2 px-2 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 font-mono text-[10px] font-semibold text-slate-600 dark:text-slate-300">
+                    farm-ops.app / inventory
+                  </span>
+                </div>
+                <span class="text-[10px] font-mono font-semibold text-emerald-600 dark:text-emerald-400">
+                  Operations Portal
+                </span>
+              </div>
+
+              <!-- Viewport Container with Badges (No Switch Dock!) -->
+              <div class="relative h-52 sm:h-56 bg-slate-950 overflow-hidden group" data-scroller-for="farm-admin">
+                <div class="absolute top-2.5 left-2.5 z-20 pointer-events-none">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-emerald-600 text-white font-mono text-[11px] font-bold shadow-md shadow-emerald-500/25">
+                    <iconify-icon icon="lucide:shield-check" width="12"></iconify-icon>
+                    <span>Admin Portal</span>
+                  </span>
+                </div>
+                <div class="absolute top-2.5 right-2.5 z-20 pointer-events-none">
+                  <span class="inline-flex items-center px-2.5 py-1 rounded-xl bg-slate-900/90 text-white font-mono text-[11px] font-bold backdrop-blur-md border border-white/10 shadow-sm">
+                    Agritech
+                  </span>
+                </div>
+
+                <!-- Static Image with Fallback Built-in Mockup -->
+                <img src="assets/projects/farm-admin.jpg" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');" alt="Farm Management Admin Preview" class="w-full h-full object-cover object-top" />
+                <div class="builtin-mockup w-full h-full text-left bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 flex flex-col justify-between">
+                  <div class="px-3.5 py-2 bg-emerald-700 text-white flex items-center justify-between text-[10px]">
+                    <span class="font-bold">Farm Operations Admin</span>
+                    <span class="px-1.5 py-0.5 rounded bg-white/20 font-mono text-[8px]">Live Stock Tracker</span>
+                  </div>
+                  <div class="p-3 flex-1 flex flex-col justify-between">
+                    <div class="rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 p-2 text-[9px]">
+                      <div class="flex items-center justify-between font-bold mb-1">
+                        <span>Export Shipment Volumes</span>
+                        <span class="text-emerald-600 font-mono">+18.4%</span>
+                      </div>
+                      <div class="flex items-end gap-1.5 h-10 pt-1">
+                        <div class="flex-1 h-4 rounded-t bg-emerald-300 dark:bg-emerald-700"></div>
+                        <div class="flex-1 h-6 rounded-t bg-teal-400"></div>
+                        <div class="flex-1 h-9 rounded-t bg-emerald-500"></div>
+                        <div class="flex-1 h-7 rounded-t bg-sky-400"></div>
+                        <div class="flex-1 h-8 rounded-t bg-emerald-600"></div>
+                      </div>
+                    </div>
+                    <div class="flex justify-between items-center px-2 py-1.5 rounded-lg bg-emerald-50/70 dark:bg-white/5 text-[8px] font-mono">
+                      <span>Dairy Cattle Batch &bull; Active 142</span>
+                      <span class="text-emerald-700 dark:text-emerald-300 font-bold">Export Ready</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Body (Compact & Exactly 2 Points) -->
+            <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                  Farm Management – Livestock &amp; Inventory Portal
+                </h3>
+                <div class="mt-1.5 text-xs text-slate-600 dark:text-slate-300">
+                  <span class="font-bold text-emerald-600 dark:text-emerald-400">Stack:</span> React.js, Redux Toolkit, Axios, Bootstrap 5, RESTful APIs
+                </div>
+                <p class="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Centralized operational dashboard for tracking multi-category livestock operations, inventory levels, and export logistics.
+                </p>
+
+                <!-- Exactly 2 Points -->
+                <ul class="mt-3 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                  <li class="flex items-start gap-2">
+                    <iconify-icon icon="lucide:check" class="text-emerald-600 dark:text-emerald-400 font-bold shrink-0 mt-0.5 text-sm"></iconify-icon>
+                    <span>Developed centralized React.js dashboard to track multi-category livestock operations and real-time inventory levels.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <iconify-icon icon="lucide:check" class="text-emerald-600 dark:text-emerald-400 font-bold shrink-0 mt-0.5 text-sm"></iconify-icon>
+                    <span>Engineered export tracking and distribution modules monitoring live shipment volumes and actionable analytics.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Action Button -->
+              <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10">
+                <button type="button" onclick="openProjectModal('farm-admin')"
+                  class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 shadow-md shadow-indigo-500/20 transition-all">
+                  <span>View Case Study</span>
+                  <iconify-icon icon="lucide:arrow-up-right" width="15"></iconify-icon>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: DOCURE — HEALTHCARE WEBSITE (WEBSITE ONLY)             -->
+          <article data-project-id="docure-web" data-project-card="docure-web"
+            class="project-card glass-card glass-card-hover rounded-3xl overflow-hidden flex flex-col reveal border border-slate-200/80 dark:border-white/10 shadow-md shadow-slate-200/30 dark:shadow-none transition-all duration-300">
+            
+            <!-- Compact Preview Frame (No Web/Admin Tabs!) -->
+            <div class="bg-slate-100/90 dark:bg-slate-900/90 border-b border-slate-200/80 dark:border-white/10">
+              <!-- Chrome Header -->
+              <div class="flex items-center justify-between px-3.5 py-2 border-b border-slate-200/80 dark:border-white/10 bg-white/80 dark:bg-slate-900">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                  <span class="ml-2 px-2 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 font-mono text-[10px] font-semibold text-slate-600 dark:text-slate-300">
+                    docure.health / doctors
+                  </span>
+                </div>
+                <span class="text-[10px] font-mono font-semibold text-fuchsia-600 dark:text-fuchsia-400">
+                  Public Website
+                </span>
+              </div>
+
+              <!-- Viewport Container with Badges (No Switch Dock!) -->
+              <div class="relative h-52 sm:h-56 bg-slate-950 overflow-hidden group" data-scroller-for="docure-web">
+                <div class="absolute top-2.5 left-2.5 z-20 pointer-events-none">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-blue-600 text-white font-mono text-[11px] font-bold shadow-md shadow-blue-500/25">
+                    <iconify-icon icon="lucide:globe" width="12"></iconify-icon>
+                    <span>Website</span>
+                  </span>
+                </div>
+                <div class="absolute top-2.5 right-2.5 z-20 pointer-events-none">
+                  <span class="inline-flex items-center px-2.5 py-1 rounded-xl bg-slate-900/90 text-white font-mono text-[11px] font-bold backdrop-blur-md border border-white/10 shadow-sm">
+                    HealthTech
+                  </span>
+                </div>
+
+                <!-- Static Image with Fallback Built-in Mockup -->
+                <img src="assets/projects/docure-web.jpg" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');" alt="Docure Healthcare Preview" class="w-full h-full object-cover object-top" />
+                <div class="builtin-mockup w-full h-full text-left bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 flex flex-col justify-between">
+                  <div class="p-3.5 bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-500 text-white">
+                    <div class="flex items-center justify-between text-[10px] mb-1">
+                      <span class="font-extrabold">DOCURE HEALTH</span>
+                      <span class="px-1.5 py-0.5 rounded bg-white/20 font-mono text-[8px]">Near Me</span>
+                    </div>
+                    <div class="text-xs sm:text-sm font-extrabold">Search Specialized Doctors Near You</div>
+                    <p class="text-[9px] text-purple-100 mt-0.5">Geolocation discovery &amp; real-time slot booking.</p>
+                  </div>
+                  <div class="p-2.5 space-y-1.5 text-[9px]">
+                    <div class="p-2 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200/80 dark:border-white/10 flex justify-between items-center">
+                      <div>
+                        <div class="font-bold text-[10px]">Dr. Aarav Sundaram, MD</div>
+                        <div class="text-[8px] text-slate-500">Cardiologist &bull; 1.8 km away</div>
+                      </div>
+                      <span class="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-700 font-bold text-[8px]">Available</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Body (Compact & Exactly 2 Points) -->
+            <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                  Docure – Healthcare Discovery &amp; Appointment Website
+                </h3>
+                <div class="mt-1.5 text-xs text-slate-600 dark:text-slate-300">
+                  <span class="font-bold text-fuchsia-600 dark:text-fuchsia-400">Stack:</span> React.js, JavaScript (ES6+), Geolocation API, CSS3, REST APIs
+                </div>
+                <p class="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Responsive healthcare platform connecting patients with nearby clinical specialists through proximity geolocation and slot booking.
+                </p>
+
+                <!-- Exactly 2 Points -->
+                <ul class="mt-3 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                  <li class="flex items-start gap-2">
+                    <iconify-icon icon="lucide:check" class="text-fuchsia-600 dark:text-fuchsia-400 font-bold shrink-0 mt-0.5 text-sm"></iconify-icon>
+                    <span>Built responsive doctor discovery platform enabling proximity-based searches via Geolocation API and specialty filters.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <iconify-icon icon="lucide:check" class="text-fuchsia-600 dark:text-fuchsia-400 font-bold shrink-0 mt-0.5 text-sm"></iconify-icon>
+                    <span>Implemented dynamic appointment scheduling with real-time slot availability tracking and instant confirmations.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Action Button -->
+              <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10">
+                <button type="button" onclick="openProjectModal('docure-web')"
+                  class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 shadow-md shadow-indigo-500/20 transition-all">
+                  <span>View Case Study</span>
+                  <iconify-icon icon="lucide:arrow-up-right" width="15"></iconify-icon>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!--  EDUCATION SECTION  .......  -->
+    <section id="education" class="py-16 sm:py-24 scroll-mt-20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+          <span
+            class="inline-block px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-500/15 text-indigo-600 dark:text-indigo-300 font-mono text-xs font-semibold tracking-wider uppercase mb-3">
+            Academic Background
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            Education
+          </h2>
+          <p class="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-400">
+            Strong academic foundation in Computer Science and Engineering.
+          </p>
+        </div>
+
+        <div
+          class="relative pl-7 sm:pl-10 before:content-[''] before:absolute before:left-[11px] sm:before:left-[15px] before:top-4 before:bottom-4 before:w-[2px] before:bg-gradient-to-b before:from-indigo-500 to-sky-400/20 reveal">
+          <div class="relative glass-card glass-card-hover rounded-3xl p-6 sm:p-8">
+            <div
+              class="absolute -left-7 sm:-left-10 top-8 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white dark:bg-slate-900 border-2 border-indigo-600 flex items-center justify-center shadow-md">
+              <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+            </div>
+
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div class="flex items-start gap-4 sm:gap-5">
+                <div
+                  class="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-600 to-violet-600 text-white flex items-center justify-center shrink-0 shadow-lg shadow-indigo-500/20">
+                  <iconify-icon icon="lucide:graduation-cap" width="28"></iconify-icon>
+                </div>
+                <div>
+                  <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+                    Dhanalakshmi Srinivasan College of Engineering and Technology
+                  </h3>
+                  <p class="text-indigo-600 dark:text-indigo-400 font-bold text-sm sm:text-base mt-1">
+                    B.E. Computer Science and Engineering
+                  </p>
+                  <p class="inline-flex items-center gap-1.5 font-mono text-xs text-slate-500 dark:text-slate-400 mt-2">
+                    <iconify-icon icon="lucide:map-pin" width="14"></iconify-icon> Chennai, India
+                  </p>
+                </div>
+              </div>
+
+              <div class="shrink-0">
+                <div
+                  class="inline-flex items-center gap-2.5 px-5 py-3 rounded-2xl bg-gradient-to-r from-indigo-50 to-sky-50 dark:from-indigo-500/15 dark:to-sky-500/15 border border-indigo-200/80 dark:border-indigo-500/25">
+                  <iconify-icon icon="lucide:award" width="20"
+                    class="text-indigo-600 dark:text-indigo-400"></iconify-icon>
+                  <span class="font-mono text-base sm:text-lg font-extrabold text-slate-900 dark:text-white">CGPA:
+                    8.1</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT ME SECTION ...... -->
+    <section id="contact" class="py-16 sm:py-24 scroll-mt-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+          <span
+            class="inline-block px-3 py-1 rounded-full bg-violet-50 dark:bg-violet-500/15 text-violet-600 dark:text-violet-300 font-mono text-xs font-semibold tracking-wider uppercase mb-3">
+            Get In Touch
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            Contact Me
+          </h2>
+          <p class="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-400">
+            Feel free to reach out for Full-Stack or React.js opportunities, collaborations, or technical discussions!
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start reveal">
+          <!-- Left Column: Direct Contact Cards with 1-Click Copy -->
+          <div class="lg:col-span-5 space-y-4">
+            <div
+              class="glass-card rounded-2xl p-5 border-emerald-200/80 dark:border-emerald-500/25 bg-gradient-to-r from-emerald-50/80 to-white/80 dark:from-emerald-950/30 dark:to-slate-900/70">
+              <div class="flex items-center gap-3">
+                <span class="relative flex h-3 w-3 shrink-0">
+                  <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                </span>
+                <div>
+                  <div class="font-bold text-sm text-slate-900 dark:text-white">Available for Full-Stack / React Roles
+                  </div>
+                  <div class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Open to full-time opportunities &amp;
+                    interviews</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email Card -->
+            <div class="glass-card rounded-2xl p-5 flex items-center justify-between gap-4">
+              <div class="flex items-center gap-4 min-w-0">
+                <div
+                  class="w-11 h-11 rounded-xl bg-indigo-50 dark:bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
+                  <iconify-icon icon="lucide:mail" width="20"></iconify-icon>
+                </div>
+                <div class="min-w-0">
+                  <div class="font-mono text-xs text-slate-500 dark:text-slate-400">Email</div>
+                  <a href="mailto:subananthankasi@gmail.com"
+                    class="font-bold text-sm text-slate-900 dark:text-white hover:text-indigo-600 truncate block">
+                    subananthankasi@gmail.com
+                  </a>
+                </div>
+              </div>
+              <button type="button" onclick="copyText('subananthankasi@gmail.com', 'Email address')"
+                aria-label="Copy Email Address"
+                class="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 hover:bg-indigo-50 dark:hover:bg-indigo-500/20 text-slate-600 dark:text-slate-300 hover:text-indigo-600 transition-colors shrink-0">
+                <iconify-icon icon="lucide:copy" width="16"></iconify-icon>
+              </button>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="glass-card rounded-2xl p-5 flex items-center justify-between gap-4">
+              <div class="flex items-center gap-4 min-w-0">
+                <div
+                  class="w-11 h-11 rounded-xl bg-sky-50 dark:bg-sky-500/15 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+                  <iconify-icon icon="lucide:phone" width="20"></iconify-icon>
+                </div>
+                <div class="min-w-0">
+                  <div class="font-mono text-xs text-slate-500 dark:text-slate-400">Phone</div>
+                  <a href="tel:+917868020715"
+                    class="font-bold text-sm text-slate-900 dark:text-white hover:text-indigo-600 block">
+                    +91 7868020715
+                  </a>
+                </div>
+              </div>
+              <button type="button" onclick="copyText('+91 7868020715', 'Phone number')" aria-label="Copy Phone Number"
+                class="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 hover:bg-indigo-50 dark:hover:bg-indigo-500/20 text-slate-600 dark:text-slate-300 hover:text-indigo-600 transition-colors shrink-0">
+                <iconify-icon icon="lucide:copy" width="16"></iconify-icon>
+              </button>
+            </div>
+
+            <!-- Location Card -->
+            <div class="glass-card rounded-2xl p-5 flex items-center justify-between gap-4">
+              <div class="flex items-center gap-4 min-w-0">
+                <div
+                  class="w-11 h-11 rounded-xl bg-violet-50 dark:bg-violet-500/15 text-violet-600 dark:text-violet-400 flex items-center justify-center shrink-0">
+                  <iconify-icon icon="lucide:map-pin" width="20"></iconify-icon>
+                </div>
+                <div class="min-w-0">
+                  <div class="font-mono text-xs text-slate-500 dark:text-slate-400">Location</div>
+                  <div class="font-bold text-sm text-slate-900 dark:text-white">Chennai, Tamil Nadu, India</div>
+                </div>
+              </div>
+              <button type="button" onclick="copyText('Chennai, Tamil Nadu, India', 'Location')"
+                aria-label="Copy Location"
+                class="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 hover:bg-indigo-50 dark:hover:bg-indigo-500/20 text-slate-600 dark:text-slate-300 hover:text-indigo-600 transition-colors shrink-0">
+                <iconify-icon icon="lucide:copy" width="16"></iconify-icon>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive "Email Me" Form -->
+          <div class="lg:col-span-7">
+            <form id="contact-form" class="glass-card rounded-3xl p-6 sm:p-8 space-y-5" novalidate>
+              <div class="flex items-center justify-between border-b border-slate-200/80 dark:border-white/10 pb-4">
+                <div class="flex items-center gap-2.5">
+                  <h3 class="text-xl font-extrabold text-slate-900 dark:text-white">Email Me</h3>
+                  <iconify-icon icon="lucide:rocket" width="20"
+                    class="text-indigo-600 dark:text-indigo-400"></iconify-icon>
+                </div>
+                <span class="font-mono text-xs text-slate-500 dark:text-slate-400">Direct Inbox</span>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="contact-name"
+                    class="block text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 mb-1.5">Your Name
+                    *</label>
+                  <input id="contact-name" type="text" required placeholder="Your full name"
+                    class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-500 transition-all" />
+                </div>
+                <div>
+                  <label for="contact-email"
+                    class="block text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 mb-1.5">Your Email
+                    *</label>
+                  <input id="contact-email" type="email" required placeholder="name@company.com"
+                    class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-500 transition-all" />
+                </div>
+              </div>
+
+              <div>
+                <label for="contact-subject"
+                  class="block text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 mb-1.5">Subject
+                  *</label>
+                <input id="contact-subject" type="text" required
+                  placeholder="Full-Stack / Frontend Developer Opportunity"
+                  class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-500 transition-all" />
+              </div>
+
+              <div>
+                <label for="contact-message"
+                  class="block text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 mb-1.5">Message
+                  *</label>
+                <textarea id="contact-message" rows="4" required placeholder="Write your message here..."
+                  class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-500 transition-all resize-y"></textarea>
+              </div>
+
+              <button id="contact-submit-btn" type="submit"
+                class="btn-shine w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-indigo-600 via-violet-600 to-sky-500 hover:brightness-110 shadow-lg shadow-indigo-500/25 hover:-translate-y-0.5 transition-all">
+                <span id="contact-submit-text">Send Message</span>
+                <iconify-icon id="contact-submit-icon" icon="lucide:send" width="16"></iconify-icon>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--  FOOTER ......  -->
+  <footer
+    class="border-t border-slate-200/80 dark:border-white/10 bg-white/60 dark:bg-slate-950/40 backdrop-blur-md py-12 mt-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center gap-6">
+      <a href="#about"
+        class="text-xl font-extrabold bg-gradient-to-r from-indigo-600 via-violet-600 to-sky-500 bg-clip-text text-transparent">
+        Subananthan K
+      </a>
+
+      <nav
+        class="flex flex-wrap items-center justify-center gap-5 sm:gap-7 text-sm font-semibold text-slate-600 dark:text-slate-300"
+        aria-label="Footer Navigation">
+        <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
+        <a href="#skills" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Skills</a>
+        <a href="#experience" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Experience</a>
+        <a href="#projects" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Projects</a>
+        <a href="#education" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Education</a>
+        <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="mailto:subananthankasi@gmail.com" aria-label="Email Subananthan"
+          class="p-2.5 rounded-xl glass-card text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+          <iconify-icon icon="lucide:mail" width="18"></iconify-icon>
+        </a>
+        <a href="tel:+917868020715" aria-label="Call Subananthan"
+          class="p-2.5 rounded-xl glass-card text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+          <iconify-icon icon="lucide:phone" width="18"></iconify-icon>
+        </a>
+        <button type="button" onclick="openResumeModal()" aria-label="View Resume"
+          class="p-2.5 rounded-xl glass-card text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+          <iconify-icon icon="lucide:file-text" width="18"></iconify-icon>
+        </button>
+      </div>
+
+      <p class="text-xs text-slate-500 dark:text-slate-400">
+        &copy; 2026 Subananthan K. Built with precision in Chennai, India.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- FLOATING ACTION DOCK: WHATSAPP DIRECT CHAT & SCROLL-TO-TOP            -->
+  <!-- ===================================================================== -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col items-center gap-3">
+    <!-- WhatsApp Direct Chat Button with Professional Pre-filled Message -->
+    <a href="https://wa.me/917868020715?text=Hi%20Subananthan,%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20Full-Stack%20Developer%20opportunity%20with%20you."
+      target="_blank" rel="noopener noreferrer"
+      aria-label="Chat with Subananthan on WhatsApp"
+      class="group relative w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center shadow-lg shadow-emerald-500/35 hover:shadow-xl hover:shadow-emerald-500/50 hover:scale-110 active:scale-95 transition-all duration-300">
+      
+      <!-- Pulsing Glow Ring -->
+      <span class="animate-ping absolute inset-0 rounded-full bg-[#25D366] opacity-30 pointer-events-none"></span>
+
+      <!-- WhatsApp Icon -->
+      <iconify-icon icon="logos:whatsapp-icon" width="28" class="relative z-10"></iconify-icon>
+
+      <!-- Tooltip -->
+      <span class="absolute right-full mr-3 px-3 py-1.5 rounded-xl bg-slate-900/90 text-white text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 pointer-events-none transition-all duration-200 shadow-xl backdrop-blur-md border border-white/10">
+        Chat on WhatsApp
+      </span>
+    </a>
+
+    <!-- Scroll To Top Button -->
+    <button id="scroll-to-top-btn" type="button" onclick="scrollToTop()"
+      aria-label="Scroll to top of page"
+      class="group relative w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white flex items-center justify-center shadow-lg shadow-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/40 hover:scale-110 active:scale-95 transition-all duration-300 opacity-0 pointer-events-none translate-y-2">
+      
+      <!-- Up Arrow Icon -->
+      <iconify-icon icon="lucide:arrow-up" width="22" class="transition-transform group-hover:-translate-y-0.5"></iconify-icon>
+
+      <!-- Tooltip -->
+      <span class="absolute right-full mr-3 px-3 py-1.5 rounded-xl bg-slate-900/90 text-white text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 pointer-events-none transition-all duration-200 shadow-xl backdrop-blur-md border border-white/10">
+        Back to Top
+      </span>
+    </button>
+  </div>
+
+
+  <!-- PROJECT CASE STUDY MODAL  .......   -->
+  <div id="project-modal"
+    class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 bg-slate-900/60 backdrop-blur-md"
+    role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+    <div
+      class="bg-white dark:bg-[#0F1524] w-full max-w-2xl max-h-[88vh] overflow-y-auto rounded-3xl shadow-2xl border border-slate-200 dark:border-white/10">
+      <div
+        class="sticky top-0 z-10 flex items-start justify-between gap-4 p-6 border-b border-slate-200 dark:border-white/10 bg-white/95 dark:bg-[#0F1524]/95 backdrop-blur">
+        <div>
+          <span id="modal-project-tag"
+            class="inline-block px-2.5 py-1 rounded-lg bg-indigo-50 dark:bg-indigo-500/15 text-indigo-600 dark:text-indigo-300 font-mono text-xs font-bold mb-2"></span>
+          <h3 id="modal-project-title" class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white"></h3>
+        </div>
+        <button type="button" onclick="closeProjectModal()" aria-label="Close Case Study Modal"
+          class="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-white/10 text-slate-500 dark:text-slate-400">
+          <iconify-icon icon="lucide:x" width="20"></iconify-icon>
+        </button>
+      </div>
+
+      <div class="p-6 space-y-6">
+        <div
+          class="rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-900">
+          <div
+            class="flex items-center justify-between px-4 py-2 bg-slate-100 dark:bg-white/5 border-b border-slate-200 dark:border-white/10">
+            <span class="font-mono text-[11px] font-semibold text-slate-600 dark:text-slate-300">1-Page UI
+              Preview</span>
+            <button id="modal-expand-preview-btn" type="button"
+              class="inline-flex items-center gap-1 text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
+              <iconify-icon icon="lucide:maximize-2" width="13"></iconify-icon>
+              <span>Expand Full-Screen</span>
+            </button>
+          </div>
+          <div id="modal-project-preview" class="max-h-72 overflow-y-auto"></div>
+        </div>
+
+        <p id="modal-project-summary" class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+        </p>
+
+        <div>
+          <h4 class="font-mono text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-3">
+            Architecture &amp; Key Highlights
+          </h4>
+          <ul id="modal-project-highlights" class="space-y-3 text-sm text-slate-700 dark:text-slate-300"></ul>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-3">
+            Tech Stack
+          </h4>
+          <div id="modal-project-tech" class="flex flex-wrap gap-2"></div>
+        </div>
+      </div>
+
+      <div
+        class="p-5 border-t border-slate-200 dark:border-white/10 flex items-center justify-end bg-slate-50 dark:bg-white/[0.02]">
+        <button type="button" onclick="closeProjectModal()"
+          class="px-5 py-2.5 rounded-xl text-sm font-bold text-slate-700 dark:text-slate-200 bg-slate-200/80 dark:bg-white/10 hover:bg-slate-300/80 dark:hover:bg-white/15 transition-colors">
+          Close Case Study
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FULL-SCREEN 1-PAGE SCREENSHOT LIGHTBOX MODAL .... -->
+  <div id="screenshot-lightbox"
+    class="fixed inset-0 z-[55] hidden items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-md"
+    role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+    <div
+      class="bg-white dark:bg-[#0F1524] w-full max-w-4xl max-h-[90vh] rounded-3xl shadow-2xl border border-slate-200 dark:border-white/10 flex flex-col overflow-hidden">
+      <div
+        class="flex items-center justify-between px-5 py-3.5 border-b border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/[0.03]">
+        <div class="flex items-center gap-2 min-w-0">
+          <iconify-icon icon="lucide:monitor" width="18"
+            class="text-indigo-600 dark:text-indigo-400 shrink-0"></iconify-icon>
+          <h3 id="lightbox-title" class="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white truncate">
+            1-Page Preview</h3>
+        </div>
+        <button type="button" onclick="closeScreenshotLightbox()" aria-label="Close Full-Screen Preview"
+          class="p-2 rounded-xl hover:bg-slate-200 dark:hover:bg-white/10 text-slate-600 dark:text-slate-300">
+          <iconify-icon icon="lucide:x" width="18"></iconify-icon>
+        </button>
+      </div>
+      <div id="lightbox-content" class="overflow-y-auto p-4 sm:p-6 bg-slate-100 dark:bg-slate-950"></div>
+    </div>
+  </div>
+
+
+  <!-- RESUME PREVIEW & DOWNLOAD MODAL   .....   -->
+
+  <div id="resume-modal"
+    class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-6 bg-slate-900/65 backdrop-blur-md"
+    role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+    <div
+      class="bg-white dark:bg-[#0F1524] w-full max-w-4xl max-h-[92vh] rounded-3xl shadow-2xl border border-slate-200 dark:border-white/10 flex flex-col overflow-hidden">
+      <div
+        class="no-print flex flex-wrap items-center justify-between gap-3 px-5 py-4 border-b border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/[0.03]">
+        <div class="flex items-center gap-2.5">
+          <iconify-icon icon="lucide:file-text" width="20" class="text-indigo-600 dark:text-indigo-400"></iconify-icon>
+          <h3 id="resume-modal-title" class="font-extrabold text-slate-900 dark:text-white text-sm sm:text-base">
+            Subananthan K — Resume</h3>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <button type="button" onclick="window.print()"
+            class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-500 shadow-sm transition-colors">
+            <iconify-icon icon="lucide:printer" width="15"></iconify-icon>
+            <span>Print / Save as PDF</span>
+          </button>
+          <button type="button" onclick="downloadHtmlResume()"
+            class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 bg-slate-200/80 dark:bg-white/10 hover:bg-slate-300/80 dark:hover:bg-white/15 transition-colors">
+            <iconify-icon icon="lucide:download" width="15"></iconify-icon>
+            <span>Download HTML Resume</span>
+          </button>
+          <button type="button" onclick="closeResumeModal()" aria-label="Close Resume Modal"
+            class="p-2 rounded-xl hover:bg-slate-200 dark:hover:bg-white/10 text-slate-600 dark:text-slate-300">
+            <iconify-icon icon="lucide:x" width="18"></iconify-icon>
+          </button>
+        </div>
+      </div>
+
+      <!-- Printable Formatted Resume -->
+      <div class="overflow-y-auto p-4 sm:p-8 bg-slate-100 dark:bg-slate-950/60">
+        <div id="printable-resume"
+          class="bg-white text-slate-900 max-w-3xl mx-auto p-6 sm:p-10 rounded-2xl shadow-md border border-slate-200 text-sm leading-relaxed">
+          <div
+            class="border-b-2 border-slate-900 pb-4 mb-5 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+            <div>
+              <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">SUBANANTHAN K</h1>
+              <p class="text-indigo-700 font-bold text-base">Full-Stack Developer</p>
+            </div>
+            <div class="text-xs text-slate-600 sm:text-right space-y-0.5 font-mono">
+              <div>subananthankasi@gmail.com</div>
+              <div>+91 7868020715</div>
+              <div>Chennai, India</div>
+            </div>
+          </div>
+
+          <section class="mb-5">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-700 border-b border-slate-200 pb-1 mb-2">
+              Summary</h2>
+            <p class="text-slate-700 text-xs sm:text-sm">
+              Results-driven Full-Stack Developer with 3 years of hands-on professional experience architecting,
+              building, and maintaining scalable web applications, custom CMS platforms, and RESTful APIs. Proficient in
+              PHP (Laravel, CodeIgniter 4), modern JavaScript (React.js, Next.js, ES6+), Node.js, Express.js, and
+              relational/NoSQL databases (MySQL, PostgreSQL, MongoDB, Redis). Proven expertise in integrating secure
+              payment gateways (PhonePe, Razorpay, PayPal), building dynamic admin dashboards, and implementing
+              responsive UI/UX designs.
+            </p>
+          </section>
+
+          <section class="mb-5">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-700 border-b border-slate-200 pb-1 mb-2">
+              Technical Skills</h2>
+            <div class="space-y-1 text-xs sm:text-sm text-slate-700">
+              <div><strong>Frontend:</strong> React.js, Next.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Bootstrap
+                5, Redux Toolkit, Context API, i18next, Axios &amp; Fetch API</div>
+              <div><strong>Backend &amp; Frameworks:</strong> Node.js, Express.js, PHP, Laravel, CodeIgniter 4 (MVC),
+                RESTful API Development</div>
+              <div><strong>Databases:</strong> MongoDB, MySQL, PostgreSQL, Redis</div>
+              <div><strong>Integrations &amp; Payment Gateways:</strong> Razorpay, PhonePe Payment Gateway, PayPal REST
+                API, Google Maps API, Third-Party REST APIs</div>
+              <div><strong>Tools &amp; Deployment:</strong> Git, GitHub, Postman, cPanel, Apache, FilePond, AJAX</div>
+            </div>
+          </section>
+
+          <section class="mb-5">
+            <h2
+              class="text-xs font-bold uppercase tracking-widest text-indigo-700 border-b border-slate-200 pb-1 mb-2.5">
+              Work Experience</h2>
+            <div class="mb-4">
+              <div class="flex flex-wrap justify-between font-bold text-slate-900">
+                <span>Gharuda Infotech — Frontend Developer</span>
+                <span class="font-mono text-xs text-slate-600">Dec 2024 – Present | Chennai</span>
+              </div>
+              <ul class="list-disc pl-5 mt-1.5 space-y-1 text-xs sm:text-sm text-slate-700">
+                <li>Architected and maintained scalable full-stack web platforms using CodeIgniter 4 (MVC), Laravel, and
+                  React.js.</li>
+                <li>Developed and consumed secure RESTful APIs enabling seamless, real-time communication between
+                  React.js frontend interfaces and backend services.</li>
+                <li>Integrated enterprise payment solutions including PhonePe and Razorpay for e-commerce checkouts and
+                  subscription workflows.</li>
+                <li>Built dynamic administrative dashboards and CMS modules with role-based access control (RBAC),
+                  AJAX-based asynchronous form submissions, and FilePond media upload management.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="flex flex-wrap justify-between font-bold text-slate-900">
+                <span>Ebrain Technologies — Frontend Developer</span>
+                <span class="font-mono text-xs text-slate-600">Mar 2023 – Dec 2024 | Thanjavur</span>
+              </div>
+              <ul class="list-disc pl-5 mt-1.5 space-y-1 text-xs sm:text-sm text-slate-700">
+                <li>Engineered and maintained high-performance, responsive single-page web applications using React.js,
+                  JavaScript (ES6+), HTML5, and Tailwind CSS / Bootstrap 5 across diverse screens.</li>
+                <li>Integrated RESTful APIs using Axios and Fetch API, architecting asynchronous data handling patterns
+                  and managing complex state flows with Redux Toolkit and Context API.</li>
+                <li>Developed reusable design systems, modular UI components, and dynamic form workflows with robust
+                  client-side validation, reducing code duplication and accelerating feature delivery.</li>
+                <li>Optimized DOM rendering efficiency, asset compression, and bundle size, significantly enhancing page
+                  speed, runtime responsiveness, and Core Web Vitals metrics.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="mb-5">
+            <h2
+              class="text-xs font-bold uppercase tracking-widest text-indigo-700 border-b border-slate-200 pb-1 mb-2.5">
+              Key Projects</h2>
+            <div class="space-y-2.5 text-xs sm:text-sm text-slate-700">
+              <div>
+                <div class="font-bold text-slate-900">Boolok — Public Real Estate Website &amp; Enterprise Admin Portal
+                </div>
+                <p>End-to-end public property discovery portal and enterprise Admin/Staff portal with 160+ functional
+                  modules, multi-tier RBAC, 7 property categories, 6 real estate services, multi-stage operational
+                  verification pipeline, Google Maps API geospatial discovery, and Razorpay full/EMI payments with
+                  downloadable receipts.</p>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900">TTS Brothers — Multilingual E-Commerce Website &amp; Operations
+                  Admin Portal (Germany)</div>
+                <p>International e-commerce storefront and operational Admin Portal for a German client with real-time
+                  bilingual localization (German &amp; English) via i18next, PayPal REST API cross-border payments, and
+                  automated post-order returns, replacements, and refund tracking.</p>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900">Farm Management — Livestock &amp; Inventory Admin Portal</div>
+                <p>Centralized React.js administration dashboard tracking multi-category livestock operations, real-time
+                  inventory levels, export shipment volumes, and actionable inventory analytics.</p>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900">Docure — Healthcare Discovery &amp; Appointment Booking Platform
+                </div>
+                <p>Responsive healthcare discovery platform enabling patients to search specialized doctors via
+                  proximity geolocation, filter by clinical specialty, and book real-time slots with instant
+                  confirmations.</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-700 border-b border-slate-200 pb-1 mb-2">
+              Education</h2>
+            <div class="flex flex-wrap justify-between text-xs sm:text-sm">
+              <div>
+                <div class="font-bold text-slate-900">B.E. Computer Science and Engineering</div>
+                <div class="text-slate-700">Dhanalakshmi Srinivasan College of Engineering and Technology, Chennai</div>
+              </div>
+              <div class="font-mono font-bold text-slate-900">CGPA: 8.1</div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-[60] flex flex-col gap-2.5 pointer-events-none"
+    aria-live="polite"></div>
+
+
+  <!-- APPLICATION JAVASCRIPT                                                -->
+  <script>
+    (function () {
+      'use strict';
+
+
+      /*  THEME TOGGLE (DEFAULTS TO LUMINOUS LIGHT MODE ON LOAD)           */
+
+      const htmlEl = document.documentElement;
+      const themeToggleBtn = document.getElementById('theme-toggle');
+
+      function applyTheme(mode) {
+        if (mode === 'dark') {
+          htmlEl.classList.add('dark');
+        } else {
+          htmlEl.classList.remove('dark');
+        }
+        try {
+          localStorage.setItem('sk_light_portfolio_theme', mode);
+        } catch (err) {
+          // Ignore sandboxed storage restrictions
+        }
+      }
+
+      try {
+        const saved = localStorage.getItem('sk_light_portfolio_theme');
+        applyTheme(saved === 'dark' ? 'dark' : 'light');
+      } catch (err) {
+        applyTheme('light');
+      }
+
+      themeToggleBtn.addEventListener('click', () => {
+        applyTheme(htmlEl.classList.contains('dark') ? 'light' : 'dark');
+      });
+
+      /*  SCROLL PROGRESS, ACTIVE NAV & TIMELINE FILL                      */
+      const progressBar = document.getElementById('scroll-progress');
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const expTimeline = document.getElementById('experience-timeline');
+      const expProgressLine = document.getElementById('experience-progress-line');
+
+      function updateTimelineProgress() {
+        if (!expTimeline || !expProgressLine) return;
+        const rect = expTimeline.getBoundingClientRect();
+        const viewHeight = window.innerHeight;
+        const total = rect.height;
+        const filled = Math.max(0, Math.min(total - 24, viewHeight * 0.62 - rect.top));
+        expProgressLine.style.height = `${filled}px`;
+      }
+
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
+        progressBar.style.width = `${progress}%`;
+
+        let activeId = 'about';
+        const offsetPos = scrollTop + 140;
+        sections.forEach((sec) => {
+          if (offsetPos >= sec.offsetTop && offsetPos < sec.offsetTop + sec.offsetHeight) {
+            activeId = sec.getAttribute('id');
+          }
+        });
+        navLinks.forEach((link) => {
+          link.classList.toggle('active', link.getAttribute('href') === `#${activeId}`);
+        });
+
+        updateTimelineProgress();
+      }, { passive: true });
+      updateTimelineProgress();
+
+      /* HERO SPOTLIGHT, 3D CARD TILT & STAT COUNTERS  */
+      const heroSection = document.getElementById('about');
+      const heroSpotlight = document.getElementById('hero-spotlight');
+      if (heroSection && heroSpotlight && window.matchMedia('(pointer: fine)').matches) {
+        heroSection.addEventListener('mousemove', (e) => {
+          const rect = heroSection.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          heroSpotlight.style.background = `radial-gradient(520px circle at ${x}px ${y}px, rgba(99, 102, 241, 0.13), rgba(14, 165, 233, 0.06) 45%, transparent 72%)`;
+          heroSpotlight.style.opacity = '1';
+        });
+        heroSection.addEventListener('mouseleave', () => {
+          heroSpotlight.style.opacity = '0';
+        });
+      }
+
+      if (window.matchMedia('(pointer: fine)').matches) {
+        document.querySelectorAll('.tilt-card').forEach((card) => {
+          card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const px = (e.clientX - rect.left) / rect.width - 0.5;
+            const py = (e.clientY - rect.top) / rect.height - 0.5;
+            card.style.transform = `perspective(900px) rotateX(${(-py * 3.5).toFixed(2)}deg) rotateY(${(px * 3.5).toFixed(2)}deg) translateY(-4px)`;
+          });
+          card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+          });
+        });
+      }
+
+      const statCounters = document.querySelectorAll('.stat-counter');
+      function animateCounter(el) {
+        const target = parseFloat(el.getAttribute('data-target') || '0');
+        const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        const suffix = el.getAttribute('data-suffix') || '';
+        const duration = 1200;
+        const startTime = performance.now();
+
+        function step(now) {
+          const elapsed = Math.min(1, (now - startTime) / duration);
+          const eased = 1 - Math.pow(1 - elapsed, 3);
+          const val = target * eased;
+          el.textContent = (decimals > 0 ? val.toFixed(decimals) : Math.round(val)) + suffix;
+          if (elapsed < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      if ('IntersectionObserver' in window) {
+        const statObs = new IntersectionObserver((entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.4 });
+        statCounters.forEach((el) => statObs.observe(el));
+      }
+
+      /*  HERO TYPING ANIMATION & PROFILE PHOTO UPLOAD                     */
+  
+      const typingEl = document.getElementById('typing-role');
+      const roles = [
+        'Full-Stack Developer',
+        'React.js Specialist',
+        'Frontend Architect',
+        'MERN & PHP Developer'
+      ];
+      let roleIdx = 0;
+      let charIdx = roles[0].length;
+      let isDeleting = true;
+
+      function runTyping() {
+        const currentRole = roles[roleIdx];
+        if (isDeleting) {
+          charIdx--;
+          typingEl.textContent = currentRole.slice(0, charIdx);
+          if (charIdx === 0) {
+            isDeleting = false;
+            roleIdx = (roleIdx + 1) % roles.length;
+            setTimeout(runTyping, 320);
+            return;
+          }
+          setTimeout(runTyping, 42);
+        } else {
+          charIdx++;
+          typingEl.textContent = currentRole.slice(0, charIdx);
+          if (charIdx === currentRole.length) {
+            isDeleting = true;
+            setTimeout(runTyping, 2100);
+            return;
+          }
+          setTimeout(runTyping, 78);
+        }
+      }
+      setTimeout(runTyping, 1800);
+
+
+      /* TECHNICAL SKILLS DATA, ICONIFIED RENDERING & FILTER TABS         */
+      const skillCategories = [
+        {
+          id: 'frontend',
+          title: 'Frontend',
+          icon: 'lucide:layout',
+          accent: 'from-indigo-600 to-sky-500',
+          badgeBg: 'bg-indigo-50 dark:bg-indigo-500/15 text-indigo-700 dark:text-indigo-300',
+          items: [
+            { name: 'React.js', icon: 'logos:react' },
+            { name: 'Next.js', icon: 'simple-icons:nextdotjs', colorClass: 'text-slate-900 dark:text-white' },
+            { name: 'JavaScript (ES6+)', icon: 'logos:javascript' },
+            { name: 'HTML5', icon: 'logos:html-5' },
+            { name: 'CSS3', icon: 'logos:css-3' },
+            { name: 'Tailwind CSS', icon: 'logos:tailwindcss-icon' },
+            { name: 'Bootstrap 5', icon: 'logos:bootstrap' },
+            { name: 'Redux Toolkit', icon: 'logos:redux' },
+            { name: 'Context API', icon: 'lucide:share-2', colorClass: 'text-indigo-600 dark:text-indigo-400' },
+            { name: 'i18next', icon: 'simple-icons:i18next', colorClass: 'text-teal-600 dark:text-teal-400' },
+            { name: 'Axios & Fetch API', icon: 'simple-icons:axios', colorClass: 'text-violet-600 dark:text-violet-400' }
+          ]
+        },
+        {
+          id: 'backend',
+          title: 'Backend & Frameworks',
+          icon: 'lucide:server',
+          accent: 'from-violet-600 to-indigo-600',
+          badgeBg: 'bg-violet-50 dark:bg-violet-500/15 text-violet-700 dark:text-violet-300',
+          items: [
+            { name: 'Node.js', icon: 'logos:nodejs-icon' },
+            { name: 'Express.js', icon: 'simple-icons:express', colorClass: 'text-slate-800 dark:text-slate-200' },
+            { name: 'PHP', icon: 'logos:php' },
+            { name: 'Laravel', icon: 'logos:laravel' },
+            { name: 'CodeIgniter 4 (MVC)', icon: 'logos:codeigniter-icon' },
+            { name: 'RESTful API Development', icon: 'lucide:webhook', colorClass: 'text-sky-600 dark:text-sky-400' }
+          ]
+        },
+        {
+          id: 'databases',
+          title: 'Databases',
+          icon: 'lucide:database',
+          accent: 'from-emerald-600 to-teal-500',
+          badgeBg: 'bg-emerald-50 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-300',
+          items: [
+            { name: 'MongoDB', icon: 'logos:mongodb-icon' },
+            { name: 'MySQL', icon: 'logos:mysql-icon' },
+            { name: 'PostgreSQL', icon: 'logos:postgresql' },
+            { name: 'Redis', icon: 'logos:redis' }
+          ]
+        },
+        {
+          id: 'integrations',
+          title: 'Payments & Integrations',
+          icon: 'lucide:credit-card',
+          accent: 'from-sky-500 to-blue-600',
+          badgeBg: 'bg-sky-50 dark:bg-sky-500/15 text-sky-700 dark:text-sky-300',
+          items: [
+            { name: 'Razorpay', icon: 'simple-icons:razorpay', colorClass: 'text-blue-600 dark:text-blue-400' },
+            { name: 'PhonePe Payment Gateway', icon: 'simple-icons:phonepe', colorClass: 'text-purple-600 dark:text-purple-400' },
+            { name: 'PayPal REST API', icon: 'logos:paypal' },
+            { name: 'Google Maps API', icon: 'logos:google-maps' },
+            { name: 'Third-Party REST APIs', icon: 'lucide:plug-zap', colorClass: 'text-amber-600 dark:text-amber-400' }
+          ]
+        },
+        {
+          id: 'tools',
+          title: 'Tools & Deployment',
+          icon: 'lucide:wrench',
+          accent: 'from-amber-500 to-orange-500',
+          badgeBg: 'bg-amber-50 dark:bg-amber-500/15 text-amber-700 dark:text-amber-300',
+          items: [
+            { name: 'Git', icon: 'logos:git-icon' },
+            { name: 'GitHub', icon: 'mdi:github', colorClass: 'text-slate-900 dark:text-white' },
+            { name: 'Postman', icon: 'logos:postman-icon' },
+            { name: 'cPanel', icon: 'logos:cpanel' },
+            { name: 'Apache', icon: 'logos:apache' },
+            { name: 'FilePond', icon: 'lucide:upload-cloud', colorClass: 'text-indigo-600 dark:text-indigo-400' },
+            { name: 'AJAX', icon: 'lucide:refresh-cw', colorClass: 'text-sky-600 dark:text-sky-400' }
+          ]
+        }
+      ];
+
+      const skillsContainer = document.getElementById('skills-categories-container');
+      const skillTabs = document.querySelectorAll('.skill-tab');
+
+      function renderSkillCategories(filter = 'all') {
+        if (!skillsContainer) return;
+        const filtered = filter === 'all'
+          ? skillCategories
+          : skillCategories.filter((cat) => cat.id === filter);
+
+        // Center single card nicely when filtering one category
+        if (filtered.length === 1) {
+          skillsContainer.classList.remove('md:grid-cols-2');
+          skillsContainer.classList.add('max-w-3xl', 'mx-auto');
+        } else {
+          skillsContainer.classList.add('md:grid-cols-2');
+          skillsContainer.classList.remove('max-w-3xl', 'mx-auto');
+        }
+
+        skillsContainer.innerHTML = filtered.map((cat, idx) => {
+          const spanClass = (filter === 'all' && idx === filtered.length - 1 && filtered.length % 2 === 1)
+            ? 'md:col-span-2'
+            : '';
+
+          return `
+            <div class="skill-card-animate glass-card glass-card-hover rounded-3xl p-6 sm:p-7 ${spanClass}" style="animation-delay: ${idx * 60}ms;">
+              <div class="flex items-center justify-between gap-3 mb-5 pb-4 border-b border-slate-200/80 dark:border-white/10">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-gradient-to-br ${cat.accent} text-white flex items-center justify-center shadow-md">
+                    <iconify-icon icon="${cat.icon}" width="20"></iconify-icon>
+                  </div>
+                  <h3 class="text-lg font-extrabold text-slate-900 dark:text-white">${cat.title}</h3>
+                </div>
+                <span class="px-2.5 py-1 rounded-lg font-mono text-[11px] font-bold ${cat.badgeBg}">
+                  ${cat.items.length} Skills
+                </span>
+              </div>
+
+              <div class="flex flex-wrap gap-2.5">
+                ${cat.items.map((item) => `
+                  <div class="skill-pill inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/90 dark:bg-slate-900/75 border border-slate-200/90 dark:border-white/10 shadow-sm cursor-default">
+                    <iconify-icon icon="${item.icon}" width="18" class="${item.colorClass || ''} shrink-0"></iconify-icon>
+                    <span class="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-100">${item.name}</span>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      skillTabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const filter = tab.getAttribute('data-skill-filter');
+          skillTabs.forEach((t) => {
+            t.classList.remove('bg-indigo-600', 'text-white', 'shadow-md', 'shadow-indigo-500/25', 'font-bold');
+            t.classList.add('glass-card', 'text-slate-700', 'dark:text-slate-200', 'font-semibold');
+          });
+          tab.classList.add('bg-indigo-600', 'text-white', 'shadow-md', 'shadow-indigo-500/25', 'font-bold');
+          tab.classList.remove('glass-card', 'text-slate-700', 'dark:text-slate-200', 'font-semibold');
+          renderSkillCategories(filter);
+        });
+      });
+
+      // Render all skills immediately on page load
+      renderSkillCategories('all');
+
+
+      /*  PROJECT DUAL-VIEW TOGGLE & CASE STUDY MODALS   ...... */
+
+      const projectActiveViews = {
+        boolok: 'web',
+        tts: 'web'
+      };
+
+      window.switchProjectView = function (projectKey, viewMode) {
+        projectActiveViews[projectKey] = viewMode;
+        const card = document.querySelector(`[data-project-card="${projectKey}"]`);
+        if (!card) return;
+
+        // Toggle Buttons inside switch dock
+        const btnWeb = card.querySelector('.proj-view-btn-web');
+        const btnAdmin = card.querySelector('.proj-view-btn-admin');
+        if (btnWeb && btnAdmin) {
+          if (viewMode === 'web') {
+            btnWeb.classList.add('bg-blue-600', 'text-white', 'shadow-sm', 'font-bold');
+            btnWeb.classList.remove('text-slate-300', 'font-medium');
+            btnAdmin.classList.remove('bg-blue-600', 'text-white', 'shadow-sm', 'font-bold');
+            btnAdmin.classList.add('text-slate-300', 'font-medium');
+          } else {
+            btnAdmin.classList.add('bg-blue-600', 'text-white', 'shadow-sm', 'font-bold');
+            btnAdmin.classList.remove('text-slate-300', 'font-medium');
+            btnWeb.classList.remove('bg-blue-600', 'text-white', 'shadow-sm', 'font-bold');
+            btnWeb.classList.add('text-slate-300', 'font-medium');
+          }
+        }
+
+        // Toggle View Panels
+        const panelWeb = card.querySelector('.proj-panel-web');
+        const panelAdmin = card.querySelector('.proj-panel-admin');
+        if (viewMode === 'web') {
+          if (panelWeb) panelWeb.classList.remove('hidden');
+          if (panelAdmin) panelAdmin.classList.add('hidden');
+        } else {
+          if (panelAdmin) panelAdmin.classList.remove('hidden');
+          if (panelWeb) panelWeb.classList.add('hidden');
+        }
+
+        // Update Top-Left Floating Badge
+        const badge = card.querySelector('.proj-view-badge');
+        if (badge) {
+          if (viewMode === 'web') {
+            badge.className = 'proj-view-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-blue-600 text-white font-mono text-[11px] font-bold shadow-md shadow-blue-500/25 transition-all';
+            badge.innerHTML = '<iconify-icon icon="lucide:monitor" width="12"></iconify-icon> <span>Web View</span>';
+          } else {
+            badge.className = 'proj-view-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-emerald-600 text-white font-mono text-[11px] font-bold shadow-md shadow-emerald-500/25 transition-all';
+            badge.innerHTML = '<iconify-icon icon="lucide:shield-check" width="12"></iconify-icon> <span>Admin View</span>';
+          }
+        }
+
+        // Update Chrome Browser URL
+        const chromeUrl = card.querySelector('.proj-chrome-url');
+        if (chromeUrl) {
+          if (projectKey === 'boolok') {
+            chromeUrl.textContent = viewMode === 'web' ? 'boolok.com / properties' : 'admin.boolok.in / rbac';
+          } else if (projectKey === 'tts') {
+            chromeUrl.textContent = viewMode === 'web' ? 'tts-brothers.de / store' : 'admin.tts-brothers.de / orders';
+          }
+        }
+      };
+
+      const projectDetails = {
+        'boolok': {
+          tag: 'Full-Stack Platform • Real Estate Suite',
+          title: 'Boolok – Real Estate Listing & Property Management Platform',
+          summary: 'End-to-end production ecosystem consisting of a public geospatial property discovery portal and an enterprise Admin/Staff operational suite with 160+ modules, multi-tier RBAC, and Razorpay checkout.',
+          highlights: [
+            'Integrated Google Maps API using latitude/longitude mapping to provide an interactive geospatial property discovery and boundary search experience across 7 property categories.',
+            'Decoupled frontend presentation with React.js while servicing data via lightweight CodeIgniter 4 and Laravel REST endpoints.',
+            'Implemented multi-criteria faceted filtering for location, budget, property types, and 6 dedicated real estate service request pipelines.',
+            'Architected an enterprise Admin & Staff operational suite featuring 160+ functional modules with multi-tier Role-Based Access Control (RBAC).',
+            'Designed an automated operational triage pipeline where customer enquiries transition through multi-stage verification milestones.',
+            'Integrated Razorpay payment gateway supporting full payments and structured EMI plans with instant PDF receipts and customer transaction history.'
+          ],
+          tech: ['React.js', 'CodeIgniter 4', 'Laravel', 'RESTful APIs', 'MySQL', 'Google Maps API', 'Razorpay', 'Multi-Tier RBAC', 'FilePond']
+        },
+        'tts': {
+          tag: 'Full-Stack Platform • MERN Stack (Germany)',
+          title: 'TTS Brothers – Multilingual E-Commerce & Operations Platform',
+          summary: 'International MERN stack e-commerce platform delivered for a German client featuring bilingual real-time localization, cross-border PayPal checkout, and automated post-order operations administration.',
+          highlights: [
+            'Built bilingual storefront using MongoDB, Express.js, React.js, and Node.js (MERN) with real-time German (DE) and English (EN) language switching via i18next across catalog, cart, and checkout.',
+            'Integrated PayPal REST API to handle cross-border multi-currency (EUR/USD) transactions and secure payment processing.',
+            'Centralized state management with Redux Toolkit for persistent cart state, user preferences, and dynamic localized pricing calculations.',
+            'Architected Operations Admin Portal for synchronized bilingual SKU catalog editing, live stock synchronization, and customer order tracking.',
+            'Implemented automated post-order lifecycle workflows covering return requests, replacements, and automated PayPal refund reconciliation.'
+          ],
+          tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js (MERN)', 'Redux Toolkit', 'RESTful APIs', 'i18next (DE/EN)', 'PayPal REST API', 'Tailwind CSS']
+        },
+        'farm-admin': {
+          tag: 'Operations Portal • Agritech & Analytics',
+          title: 'Farm Management – Livestock & Inventory Admin Portal',
+          summary: 'Centralized React.js administration dashboard built for tracking multi-category livestock operations, real-time inventory levels, and export logistics.',
+          highlights: [
+            'Developed a centralized React.js administration dashboard to track multi-category livestock operations, real-time inventory levels, and operational workflows.',
+            'Engineered export tracking and distribution modules to monitor shipment volumes, track operational records, and generate actionable inventory analytics.',
+            'Structured state persistence and API communication using Redux Toolkit and Axios with responsive Bootstrap 5 styling.'
+          ],
+          tech: ['React.js', 'Redux Toolkit', 'Axios', 'Bootstrap 5', 'REST APIs', 'Chart Analytics']
+        },
+        'docure-web': {
+          tag: 'Public Website • HealthTech Discovery',
+          title: 'Docure – Healthcare Discovery & Appointment Website',
+          summary: 'Responsive healthcare discovery platform connecting patients with nearby clinical specialists through proximity geolocation and real-time slot scheduling.',
+          highlights: [
+            'Built a responsive healthcare discovery platform enabling patients to search specialized doctors via proximity geolocation and filter by clinical specialty.',
+            'Implemented dynamic appointment scheduling with real-time slot availability tracking and instant consultation confirmations.',
+            'Integrated modern UI components with responsive CSS3 and robust client-side validation for patient booking details.'
+          ],
+          tech: ['React.js', 'JavaScript (ES6+)', 'Geolocation API', 'CSS3', 'REST APIs']
+        }
+      };
+
+      const projectModal = document.getElementById('project-modal');
+      const screenshotLightbox = document.getElementById('screenshot-lightbox');
+
+      function populatePreviewInto(container, projectId) {
+        container.innerHTML = '';
+        const card = document.querySelector(`[data-project-card="${projectId}"]`);
+        if (!card) return;
+
+        // Check if there is an active view panel or static preview
+        const activeView = projectActiveViews[projectId] || 'web';
+        let panel = card.querySelector(`.proj-panel-${activeView}`);
+        if (!panel) panel = card.querySelector('[data-scroller-for]');
+
+        if (panel) {
+          const img = panel.querySelector('img:not(.hidden)');
+          if (img && img.naturalWidth > 0 && img.src && !img.src.endsWith('/')) {
+            const cloneImg = document.createElement('img');
+            cloneImg.src = img.src;
+            cloneImg.alt = (projectDetails[projectId] ? projectDetails[projectId].title : 'Project') + ' Preview';
+            cloneImg.className = 'w-full h-auto block rounded-xl shadow-sm';
+            container.appendChild(cloneImg);
+            return;
+          }
+
+          const mockup = panel.querySelector('.builtin-mockup');
+          if (mockup) {
+            const clone = mockup.cloneNode(true);
+            clone.classList.remove('h-full');
+            clone.classList.add('rounded-xl', 'overflow-hidden', 'shadow-sm', 'min-h-[220px]');
+            container.appendChild(clone);
+          }
+        }
+      }
+
+      window.openScreenshotLightbox = function (projectId) {
+        const data = projectDetails[projectId];
+        document.getElementById('lightbox-title').textContent = data ? `${data.title} — Preview` : 'Project Preview';
+        populatePreviewInto(document.getElementById('lightbox-content'), projectId);
+        screenshotLightbox.classList.remove('hidden');
+        screenshotLightbox.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      };
+
+      window.closeScreenshotLightbox = function () {
+        screenshotLightbox.classList.add('hidden');
+        screenshotLightbox.classList.remove('flex');
+        if (projectModal.classList.contains('hidden')) {
+          document.body.style.overflow = '';
+        }
+      };
+
+      screenshotLightbox.addEventListener('click', (e) => {
+        if (e.target === screenshotLightbox) window.closeScreenshotLightbox();
+      });
+
+      window.openProjectModal = function (key) {
+        const data = projectDetails[key];
+        if (!data) return;
+
+        document.getElementById('modal-project-tag').textContent = data.tag;
+        document.getElementById('modal-project-title').textContent = data.title;
+        document.getElementById('modal-project-summary').textContent = data.summary;
+        populatePreviewInto(document.getElementById('modal-project-preview'), key);
+
+        const expandBtn = document.getElementById('modal-expand-preview-btn');
+        if (expandBtn) expandBtn.onclick = () => window.openScreenshotLightbox(key);
+
+        document.getElementById('modal-project-highlights').innerHTML = data.highlights.map((item) => `
+          <li class="flex items-start gap-2.5">
+            <iconify-icon icon="lucide:check-circle-2" width="17" class="text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5"></iconify-icon>
+            <span>${item}</span>
+          </li>
+        `).join('');
+
+        document.getElementById('modal-project-tech').innerHTML = data.tech.map((t) => `
+          <span class="px-3 py-1 rounded-lg bg-indigo-50 dark:bg-indigo-500/15 font-mono text-xs font-semibold text-indigo-700 dark:text-indigo-300">${t}</span>
+        `).join('');
+
+        projectModal.classList.remove('hidden');
+        projectModal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      };
+
+      window.closeProjectModal = function () {
+        projectModal.classList.add('hidden');
+        projectModal.classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+
+      projectModal.addEventListener('click', (e) => {
+        if (e.target === projectModal) window.closeProjectModal();
+      });
+
+
+      /*  RESUME PREVIEW MODAL & DOWNLOAD HTML RESUME  ....... */
+
+      const resumeModal = document.getElementById('resume-modal');
+
+      window.openResumeModal = function () {
+        resumeModal.classList.remove('hidden');
+        resumeModal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      };
+
+      window.closeResumeModal = function () {
+        resumeModal.classList.add('hidden');
+        resumeModal.classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+
+      resumeModal.addEventListener('click', (e) => {
+        if (e.target === resumeModal) window.closeResumeModal();
+      });
+
+      window.downloadHtmlResume = function () {
+        try {
+          const content = document.getElementById('printable-resume').innerHTML;
+          const doc = [
+            '<!DOCTYPE html>',
+            '<html lang="en">',
+            '<head>',
+            '<meta charset="UTF-8" />',
+            '<meta name="viewport" content="width=device-width, initial-scale=1.0" />',
+            '<title>Subananthan K — Full-Stack Developer Resume</title>',
+            '<style>',
+            '  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #0f172a; max-width: 820px; margin: 32px auto; padding: 0 24px; line-height: 1.55; font-size: 14px; }',
+            '  h1 { margin: 0; font-size: 28px; }',
+            '  h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: #4338ca; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px; margin: 20px 0 10px; }',
+            '  ul { margin: 6px 0 0; padding-left: 20px; }',
+            '  li { margin-bottom: 4px; }',
+            '  .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }',
+            '  .font-bold { font-weight: 700; }',
+            '  .flex { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }',
+            '</style>',
+            '</' + 'head>',
+            '<body>' + content + '</' + 'body>',
+            '</' + 'html>'
+          ].join('\n');
+
+          const blob = new Blob([doc], { type: 'text/html;charset=utf-8' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'Subananthan_K_Resume.html';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+          showToast('Resume downloaded as Subananthan_K_Resume.html');
+        } catch (err) {
+          showToast('Download failed. Please use Print / Save as PDF.', 'error');
+        }
+      };
+
+
+      /* 8. MOBILE DRAWER & ESCAPE KEY HANDLER  ....... */
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileDrawer = document.getElementById('mobile-drawer');
+      const mobileOverlay = document.getElementById('mobile-drawer-overlay');
+      const mobileCloseBtn = document.getElementById('mobile-drawer-close');
+
+      function openMobileDrawer() {
+        mobileOverlay.classList.remove('hidden');
+        requestAnimationFrame(() => {
+          mobileOverlay.classList.remove('opacity-0');
+          mobileDrawer.classList.remove('translate-x-full');
+        });
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+
+      window.closeMobileDrawer = function () {
+        mobileOverlay.classList.add('opacity-0');
+        mobileDrawer.classList.add('translate-x-full');
+        setTimeout(() => mobileOverlay.classList.add('hidden'), 300);
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      };
+
+      mobileMenuBtn.addEventListener('click', openMobileDrawer);
+      mobileCloseBtn.addEventListener('click', window.closeMobileDrawer);
+      mobileOverlay.addEventListener('click', window.closeMobileDrawer);
+      document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+        link.addEventListener('click', window.closeMobileDrawer);
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          window.closeScreenshotLightbox();
+          window.closeProjectModal();
+          window.closeResumeModal();
+          window.closeMobileDrawer();
+        }
+      });
+
+
+      /* TOASTS & CLIPBOARD COPY ...... */
+      function showToast(message, type = 'success') {
+        const container = document.getElementById('toast-container');
+        const toast = document.createElement('div');
+        const styles = type === 'error'
+          ? 'border-rose-300 bg-rose-600 text-white'
+          : 'border-indigo-500/30 bg-slate-900 text-white';
+        const icon = type === 'error' ? 'lucide:alert-circle' : 'lucide:check-circle-2';
+        const iconColor = type === 'error' ? 'text-white' : 'text-emerald-400';
+
+        toast.className = `pointer-events-auto flex items-center gap-2.5 px-4 py-3 rounded-2xl border shadow-xl text-xs sm:text-sm font-semibold transform translate-y-2 opacity-0 transition-all duration-300 ${styles}`;
+        toast.innerHTML = `<iconify-icon icon="${icon}" width="18" class="${iconColor} shrink-0"></iconify-icon><span>${message}</span>`;
+        container.appendChild(toast);
+
+        requestAnimationFrame(() => toast.classList.remove('translate-y-2', 'opacity-0'));
+        setTimeout(() => {
+          toast.classList.add('translate-y-2', 'opacity-0');
+          setTimeout(() => toast.remove(), 300);
+        }, 3400);
+      }
+
+      window.copyText = function (text, label) {
+        try {
+          const temp = document.createElement('textarea');
+          temp.value = text;
+          temp.setAttribute('readonly', '');
+          temp.style.position = 'fixed';
+          temp.style.left = '-9999px';
+          document.body.appendChild(temp);
+          temp.select();
+          document.execCommand('copy');
+          document.body.removeChild(temp);
+          showToast(`${label} copied to clipboard!`);
+        } catch (err) {
+          showToast(`Unable to copy ${label}.`, 'error');
+        }
+      };
+
+
+      /*  INTERACTIVE "EMAIL ME" FORM WITH VALIDATION & TOAST FEEDBACK    */
+  
+      const contactForm = document.getElementById('contact-form');
+      const submitBtn = document.getElementById('contact-submit-btn');
+      const submitText = document.getElementById('contact-submit-text');
+      const submitIcon = document.getElementById('contact-submit-icon');
+
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('contact-name').value.trim();
+        const email = document.getElementById('contact-email').value.trim();
+        const subject = document.getElementById('contact-subject').value.trim();
+        const message = document.getElementById('contact-message').value.trim();
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!name || !email || !subject || !message) {
+          showToast('Please fill in all required fields.', 'error');
+          return;
+        }
+        if (!emailRegex.test(email)) {
+          showToast('Please enter a valid email address.', 'error');
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitText.textContent = 'Preparing Email...';
+        submitIcon.setAttribute('icon', 'lucide:loader-2');
+        submitIcon.classList.add('animate-spin');
+
+        setTimeout(() => {
+          const body = `Hi Subananthan,\n\n${message}\n\nBest regards,\n${name}\n${email}`;
+          const mailtoUrl = `mailto:subananthankasi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+          showToast('Message validated! Opening your email client...');
+          window.location.href = mailtoUrl;
+
+          contactForm.reset();
+          submitBtn.disabled = false;
+          submitText.textContent = 'Send Message';
+          submitIcon.setAttribute('icon', 'lucide:send');
+          submitIcon.classList.remove('animate-spin');
+        }, 650);
+      });
+
+
+      /*  INTERSECTION OBSERVER: STAGGERED SCROLL REVEAL ....... */
+      const revealEls = document.querySelectorAll('.reveal, .reveal-scale');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+
+        revealEls.forEach((el) => observer.observe(el));
+      } else {
+        revealEls.forEach((el) => el.classList.add('visible'));
+      }
+
+      /* ------------------------------------------------------------------- */
+      /* SCROLL TO TOP FLOATING BUTTON LOGIC                                 */
+      /* ------------------------------------------------------------------- */
+      const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
+
+      window.scrollToTop = function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      };
+
+      window.addEventListener('scroll', () => {
+        if (!scrollToTopBtn) return;
+        if (window.scrollY > 300) {
+          scrollToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+          scrollToTopBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        } else {
+          scrollToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+          scrollToTopBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        }
+      }, { passive: true });
+    })();
+  </script>
+</body>
+
+</html>
